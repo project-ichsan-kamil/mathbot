@@ -51,9 +51,8 @@ jobs:
         ssh-keyscan -H "$SERVER" >> ~/.ssh/known_hosts
 
         # Masuk ke folder mathbot dan transfer hanya file hasil build menggunakan rsync
-        cd mathbot
-        rsync -avz --delete dist/ $USERNAME@$SERVER:~/deploy
-
+         rsync -avz --delete --exclude='node_modules' --exclude='.git' mathbot/ $USERNAME@$SERVER:~/deploy
+         
     - name: Restart PM2
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}

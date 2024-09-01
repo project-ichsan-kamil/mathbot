@@ -24,12 +24,12 @@ jobs:
     - name: Install dependencies
       run: |
         cd mathbot # Navigasi ke direktori yang benar
-        npm install
+        npm install # Install semua dependensi
 
     - name: Build project
       run: |
         cd mathbot # Pastikan Anda berada di direktori yang benar
-        npm run build
+        npm run build # Build proyek Anda
 
     - name: Deploy to Server
       env:
@@ -41,7 +41,11 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H "$SERVER" >> ~/.ssh/known_hosts
-        scp -r mathbot/dist/* $USERNAME@$SERVER:~/deploy # Deploy ke folder 'deploy'
+        
+        # Menyalin seluruh proyek ke server, termasuk package.json
+        scp -r mathbot/* $USERNAME@$SERVER:~/deploy
+
+        # Menjalankan npm install di server untuk memastikan dependensi produksi terpasang
         ssh $USERNAME@$SERVER 'cd ~/deploy && npm install --production'
 
     - name: Check and Restart or Start PM2

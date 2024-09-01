@@ -19,17 +19,25 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '20' # Menggunakan Node.js versi 20
+        node-version: '20'
+
+    - name: Cache Node.js modules
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
 
     - name: Install dependencies
       run: |
-        cd mathbot # Navigasi ke direktori yang benar
-        npm install # Install semua dependensi
+        cd mathbot # Masuk ke folder mathbot
+        npm ci
 
     - name: Build project
       run: |
-        cd mathbot # Pastikan Anda berada di direktori yang benar
-        npm run build # Build proyek Anda
+        cd mathbot # Masuk ke folder mathbot
+        npm run build
 
     - name: Deploy to Server
       env:
@@ -37,21 +45,19 @@ jobs:
         SERVER: 116.193.191.9
         USERNAME: fajrulichsan
       run: |
-        # Menyiapkan SSH
         mkdir -p ~/.ssh
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H "$SERVER" >> ~/.ssh/known_hosts
 
-        # Menggunakan verbose mode untuk SCP dan SSH
-        scp -rv mathbot/* $USERNAME@$SERVER:~/deploy # Menyalin seluruh proyek ke server, termasuk package.json
-        ssh -v $USERNAME@$SERVER 'cd ~/deploy && npm install --production' # Menjalankan npm install di server untuk memastikan dependensi produksi terpasang
+        # Masuk ke folder mathbot dan transfer only the build files using rsync
+        cd mathbot
+        rsync -avz --delete dist/ $USERNAME@$SERVER:~/deploy
 
-    - name: Check and Restart or Start PM2
+    - name: Restart PM2
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SERVER: 116.193.191.9
         USERNAME: fajrulichsan
       run: |
-        # Menambahkan verbose mode untuk SSH
-        ssh -v $USERNAME@$SERVER 'if pm2 list | grep -q "mathbot"; then pm2 restart mathbot; else pm2 start npm --name mathbot -- run start; fi'
+        ssh $USERNAME@$SERVER 'if pm2 list | grep -q "mathbot"; then pm2 restart mathbot; else pm2 start npm --name mathbot -- run start; fi'

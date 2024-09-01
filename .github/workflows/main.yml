@@ -22,10 +22,14 @@ jobs:
         node-version: '20' # Menggunakan Node.js versi 20
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        cd mathbot # Navigasi ke direktori yang benar
+        npm install
 
     - name: Build project
-      run: npm run build
+      run: |
+        cd mathbot # Pastikan Anda berada di direktori yang benar
+        npm run build
 
   deploy:
     runs-on: ubuntu-latest
@@ -42,10 +46,14 @@ jobs:
         node-version: '20' # Menggunakan Node.js versi 20
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        cd mathbot # Navigasi ke direktori yang benar
+        npm install
 
     - name: Build project
-      run: npm run build
+      run: |
+        cd mathbot # Pastikan Anda berada di direktori yang benar
+        npm run build
 
     - name: Deploy to Server
       env:
@@ -57,7 +65,7 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H "$SERVER" >> ~/.ssh/known_hosts
-        scp -r dist/* $USERNAME@$SERVER:/path/to/deploy/directory
+        scp -r mathbot/dist/* $USERNAME@$SERVER:/path/to/deploy/directory
         ssh $USERNAME@$SERVER 'cd /path/to/deploy/directory && npm install --production'
 
     - name: Check and Restart or Start PM2

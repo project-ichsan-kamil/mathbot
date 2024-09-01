@@ -41,8 +41,8 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H "$SERVER" >> ~/.ssh/known_hosts
-        scp -r mathbot/dist/* $USERNAME@$SERVER:/path/to/deploy/directory
-        ssh $USERNAME@$SERVER 'cd /path/to/deploy/directory && npm install --production'
+        scp -r mathbot/dist/* $USERNAME@$SERVER:~/deploy # Deploy ke folder 'deploy'
+        ssh $USERNAME@$SERVER 'cd ~/deploy && npm install --production'
 
     - name: Check and Restart or Start PM2
       env:

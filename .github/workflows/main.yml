@@ -34,24 +34,24 @@ jobs:
     - name: Deploy to Server
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SERVER: ${{ secrets.SERVER }}
-        USERNAME: ${{ secrets.USERNAME }}
+        SERVER: 116.193.191.9
+        USERNAME: fajrulichsan
       run: |
+        # Menyiapkan SSH
         mkdir -p ~/.ssh
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H "$SERVER" >> ~/.ssh/known_hosts
-        
-        # Menyalin seluruh proyek ke server, termasuk package.json
-        scp -r mathbot/* $USERNAME@$SERVER:~/deploy
 
-        # Menjalankan npm install di server untuk memastikan dependensi produksi terpasang
-        ssh $USERNAME@$SERVER 'cd ~/deploy && npm install --production'
+        # Menggunakan verbose mode untuk SCP dan SSH
+        scp -rv mathbot/* $USERNAME@$SERVER:~/deploy # Menyalin seluruh proyek ke server, termasuk package.json
+        ssh -v $USERNAME@$SERVER 'cd ~/deploy && npm install --production' # Menjalankan npm install di server untuk memastikan dependensi produksi terpasang
 
     - name: Check and Restart or Start PM2
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SERVER: ${{ secrets.SERVER }}
-        USERNAME: ${{ secrets.USERNAME }}
+        SERVER: 116.193.191.9
+        USERNAME: fajrulichsan
       run: |
-        ssh $USERNAME@$SERVER 'if pm2 list | grep -q "mathbot"; then pm2 restart mathbot; else pm2 start npm --name mathbot -- run start; fi'
+        # Menambahkan verbose mode untuk SSH
+        ssh -v $USERNAME@$SERVER 'if pm2 list | grep -q "mathbot"; then pm2 restart mathbot; else pm2 start npm --name mathbot -- run start; fi'

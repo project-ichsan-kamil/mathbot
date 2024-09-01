@@ -176,7 +176,4 @@ const stepsMateri1 = [
     },
   ];
 
-  //test
-  
-  
 export default {stepsMateri1, stepsMateri2};

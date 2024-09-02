@@ -1,6 +1,8 @@
+import image from '../assets/img/index'
 const stepsMateri1 = [
     {
       message: "Hai! Hari ini kita akan berbicara tentang sesuatu yang sering kita lakukan tanpa kita sadari. Pernahkah kamu membagi sesuatu dengan temanmu? Misalnya, membagi kue atau permen. Bagaimana kamu biasanya membaginya?",
+      image: image.mathbot_1_1,
       options: [
         { text: "Ya, biasanya saya membaginya sama rata.", response: "Menarik! Kamu suka membagi dengan adil.", nextStep: 1 },
         { text: "Kadang saya memberikan lebih banyak ke teman saya.", response: "Kamu sangat murah hati!", nextStep: 1 },
@@ -54,7 +56,8 @@ const stepsMateri1 = [
       ],
     },
     {
-      message: "Perhatikan Gambar berikut! Bagaimana kamu menuliskan rasio jumlah gelas berisi susu dengan jumlah gelas berisi coklat?",
+      message: "Perhatikan Gambar dibawah ini! Bagaimana kamu menuliskan rasio jumlah gelas berisi susu dengan jumlah gelas berisi coklat?",
+      image : image.mathbot_1_2,
       options: [
         { text: "4:6", response: "Tepat sekali! Rasio jumlah gelas berisi susu dengan jumlah gelas berisi coklat adalah 4:6.", nextStep: 8 },
         { text: "6:4", response: "Tidak tepat. Perbandingan ini terbalik. Seharusnya rasio yang benar adalah 4:6 atau 2:3, bukan 6:4.", nextStep: 8 },
@@ -176,7 +179,4 @@ const stepsMateri1 = [
     },
   ];
  
-
-  //test
-  //test
 export default {stepsMateri1, stepsMateri2};

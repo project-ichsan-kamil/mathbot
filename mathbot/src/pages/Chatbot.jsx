@@ -54,10 +54,11 @@ const Chatbot = () => {
 
   const handleMaterialSelection = (material) => {
     setSelectedMaterial(material);
-    setStep(0);
-    setIsTyping(true);
+    setStep(0); // Mulai dari step pertama
+    setResponses([]); // Reset responses saat memulai materi baru
+    setIsTyping(false); // Pastikan bot tidak dalam status mengetik
   };
-
+  
   return (
     <div className="flex flex-col h-screen bg-gray-100">
       <div className="flex-grow p-4 overflow-y-auto">
@@ -143,6 +144,10 @@ const Chatbot = () => {
               <div className="flex justify-start">
                 <div className="bg-blue-500 text-white rounded-lg p-3 max-w-xs">
                   {getSteps()[step].message}
+                  {/* Render gambar di dalam balon chat */}
+                  {getSteps()[step].image && (
+                    <img src={getSteps()[step].image} alt="Chat Image" className="rounded-lg mt-2" />
+                  )}
                 </div>
               </div>
               <div className="flex flex-col mt-2 ml-4">
@@ -173,6 +178,5 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
-
 
 

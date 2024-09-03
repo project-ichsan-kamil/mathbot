@@ -16,7 +16,7 @@ const Chatbot = () => {
         if (step < getSteps().length) {
           setStep((prevStep) => prevStep + 1);
         }
-      }, 2000);
+      }, 100);
       return () => clearTimeout(timer);
     }
   }, [isTyping]);
@@ -26,6 +26,8 @@ const Chatbot = () => {
       return steps.stepsMateri1;
     } else if (selectedMaterial === 'materi2') {
       return steps.stepsMateri2;
+    } else if (selectedMaterial === 'materi3') {
+      return steps.stepsMateri3; // Materi 3 ditambahkan di sini
     }
     return [];
   };
@@ -132,9 +134,15 @@ const Chatbot = () => {
               </button>
               <button
                 onClick={() => handleMaterialSelection('materi2')}
-                className="bg-blue-500 text-white py-2 px-4 rounded-lg w-full"
+                className="bg-blue-500 text-white py-2 px-4 rounded-lg w-full mb-4"
               >
                 Materi 2: Menyederhanakan dan Membandingkan Rasio
+              </button>
+              <button
+                onClick={() => handleMaterialSelection('materi3')}
+                className="bg-blue-500 text-white py-2 px-4 rounded-lg w-full"
+              >
+                Materi 3: Memahami Perbandingan dan Rasio Menggunakan Persamaan Linear
               </button>
             </div>
           </div>
@@ -144,7 +152,7 @@ const Chatbot = () => {
               <div className="flex justify-start">
                 <div className="bg-blue-500 text-white rounded-lg p-3 max-w-xs">
                   {getSteps()[step].message}
-                  {/* Render gambar di dalam balon chat */}
+                  {/* Render gambar di dalam balon chat jika ada */}
                   {getSteps()[step].image && (
                     <img src={getSteps()[step].image} alt="Chat Image" className="rounded-lg mt-2" />
                   )}
@@ -178,5 +186,4 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
-
 

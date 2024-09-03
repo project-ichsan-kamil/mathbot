@@ -35,7 +35,7 @@ const stepsMateri1 = [
     {
       message: "Mari kita tarik kesimpulan. Rasio adalah cara untuk membandingkan dua jumlah atau lebih. Dalam kasus ini, rasio 4:2 menunjukkan bahwa jumlah kue kamu dibandingkan dengan jumlah kue temanmu adalah 4 banding 2. Rasio juga bisa disederhanakan seperti yang kita lakukan dengan 4:2 menjadi 2:1.",
       options: [
-        { text: "[Lanjut]", response: "Lanjut", nextStep: 5 },
+        { text: "Lanjut", response: "Lanjut", nextStep: 5 },
       ],
     },
     {
@@ -68,7 +68,7 @@ const stepsMateri1 = [
     {
       message: "Kamu sudah bekerja dengan sangat baik hari ini! Sekarang kamu tahu bahwa rasio adalah cara untuk membandingkan dua jumlah atau lebih, dan kamu juga tahu bagaimana menyederhanakan rasio.",
       options: [
-        { text: "[Lanjut]", response: "Lanjut", nextStep: 9 },
+        { text: "Lanjut", response: "Lanjut", nextStep: 9 },
       ],
     },
     {
@@ -76,9 +76,6 @@ const stepsMateri1 = [
       options: [],
     },
   ];
-
-  //test
-
 
   const stepsMateri2 = [
     {
@@ -91,7 +88,7 @@ const stepsMateri1 = [
     {
       message: "Masih ingatkah pada materi sebelumnya kita juga telah belajar tentang bagaimana menyederhanakan rasio? Hari ini, kita akan membahasnya lebih dalam lagi agar kamu lebih paham dan bisa menggunakannya dengan lebih baik.",
       options: [
-        { text: "[Lanjut]", response: "Lanjut", nextStep: 2 },
+        { text: "Lanjut", response: "Lanjut", nextStep: 2 },
       ],
     },
     {
@@ -141,7 +138,7 @@ const stepsMateri1 = [
     {
       message: "Kamu telah membuat kemajuan besar hari ini! Sekarang kamu tahu bagaimana menyederhanakan rasio dan membandingkan rasio yang berbeda. Ini akan sangat membantu kamu dalam menyelesaikan soal-soal perbandingan di masa depan.",
       options: [
-        { text: "[Lanjut]", response: "Lanjut", nextStep: 9 },
+        { text: "Lanjut", response: "Lanjut", nextStep: 9 },
       ],
     },
     {
@@ -174,9 +171,138 @@ const stepsMateri1 = [
     {
       message: "Kamu sudah bekerja dengan sangat baik hari ini! Sekarang kamu tahu bahwa rasio adalah cara untuk membandingkan dua jumlah atau lebih, dan kamu juga tahu bagaimana menyederhanakan rasio.",
       options: [
-        { text: "[Lanjut]", response: "Lanjut", nextStep: 14 },
+        { text: "Lanjut", response: "Lanjut", nextStep: 14 },
       ],
     },
   ];
+
+  const stepsMateri3 = [
+    {
+        message: "Hai, selamat datang di pertemuan hari ini! Kita akan mempelajari lebih dalam tentang bagaimana rasio dapat dihubungkan dengan persamaan linear. Sebelum kita mulai, apakah kamu sudah siap?",
+        options: [
+            { text: "Ya, saya siap.", response: "Bagus! Mari kita mulai.", nextStep: 1 },
+            { text: "Saya masih sedikit bingung tentang rasio.", response: "Tidak apa-apa, kita akan pelajari bersama secara perlahan.", nextStep: 1 },
+        ],
+    },
+    {
+        message: "Mari kita mulai dengan contoh sederhana. Ibumu membuat pempek menggunakan 300 gram tepung tapioka dan 90 gram ikan giling. Bagaimana kamu menuliskan rasio tepung tapioka dengan ikan giling?",
+        options: [
+            { text: "Rasionya adalah 300:90.", response: "Benar! Rasionya adalah 300:90, tapi kita bisa menyederhanakannya.", nextStep: 2 },
+            { text: "Rasionya adalah 10:3.", response: "Tepat sekali! Rasio 300:90 bisa disederhanakan menjadi 10:3 dengan membagi kedua angka dengan 30.", nextStep: 2 },
+            { text: "Rasionya adalah 3:1.", response: "Tidak, 3:1 bukan hasil dari penyederhanaan rasio 300:90. Coba lagi!", nextStep: 2 },
+            { text: "Rasionya adalah 1:3.", response: "Salah, 1:3 bukan rasio yang benar. Coba perhatikan lagi angka-angka yang diberikan.", nextStep: 2 },
+        ],
+    },
+    {
+        message: "Sekarang, kita akan menerapkan konsep ini ke dalam sebuah soal kontekstual. Misalkan rasio tepung tapioka terhadap ikan giling adalah 10:3. Apa arti dari rasio ini menurutmu?",
+        options: [
+            { text: "Artinya, untuk setiap 10 bagian tepung tapioka, ada 3 bagian ikan giling.", response: "Tepat sekali! Rasio 10:3 berarti bahwa untuk setiap 10 bagian tepung tapioka, ada 3 bagian ikan giling.", nextStep: 3 },
+            { text: "Artinya, ikan giling lebih banyak daripada tepung tapioka.", response: "Tidak benar, rasio menunjukkan bahwa tepung tapioka lebih banyak daripada ikan giling.", nextStep: 3 },
+            { text: "Artinya, jumlah tepung tapioka dan ikan giling sama.", response: "Salah, rasio ini tidak menunjukkan jumlah yang sama.", nextStep: 3 },
+            { text: "Artinya, ikan giling hanya sedikit dibandingkan dengan tepung tapioka.", response: "Tidak tepat. Rasio 10:3 memang menunjukkan bahwa ikan giling lebih sedikit, tetapi jawabannya tidak lengkap.", nextStep: 3 },
+        ],
+    },
+    {
+        message: "Bagus! Sekarang kita akan belajar tentang konsep dua rasio yang sama. Misalkan terdapat dua rasio, yaitu a : b dan c : d. Jika nilai rasionya sama, kita katakan bahwa dua rasio tersebut sama dan dapat dinyatakan sebagai Hubungan yang menunjukkan rasio-rasio sama disebut perbandingan atau proporsi.",
+        options: [
+            { text: "Lanjut", response: "Lanjut", nextStep: 4 },
+        ],
+    },
+    {
+        message: "Mari kita coba dengan contoh yang berkaitan dengan rasio yang sudah kita hitung tadi. Jika rasio tepung tapioka dengan ikan giling adalah 10:3, apakah kamu bisa menemukan rasio lain yang setara dengan 10:3?",
+        options: [
+            { text: "Rasio 20:6.", response: "Tepat sekali! Rasio 20:6 setara dengan 10:3 karena jika kita membagi kedua angka pada rasio 20:6 dengan 2, kita mendapatkan 10:3.", nextStep: 5 },
+            { text: "Rasio 5:2.", response: "Tidak, 5:2 tidak setara dengan 10:3. Rasio ini menunjukkan perbandingan yang berbeda. Coba lagi!", nextStep: 5 },
+            { text: "Rasio 30:10.", response: "Tidak tepat. 30:10 memiliki angka yang lebih besar, tetapi jika kita menyederhanakannya, hasilnya bukan 10:3. Coba periksa kembali.", nextStep: 5 },
+            { text: "Rasio 10:30.", response: "Salah, 10:30 menunjukkan perbandingan yang terbalik dari rasio yang benar. Coba perhatikan kembali bagaimana rasio harus disusun.", nextStep: 5 },
+        ],
+    },
+    {
+        message: "Sekarang mari kita periksa lebih jauh. Misalkan kamu memiliki dua rasio, 15:9 dan 5:3. Menurutmu, apakah kedua rasio ini setara?",
+        options: [
+            { text: "Ya, keduanya setara.", response: "Betul sekali! Kedua rasio ini setara karena jika kita membagi 15:9 dengan 3, kita mendapatkan 5:3. Ini berarti kedua rasio memiliki perbandingan yang sama. Karena kedua rasio ini setara, kita bisa menuliskannya sebagai 15:9 = 5:3.", nextStep: 6 },
+            { text: "Tidak, keduanya tidak setara.", response: "Sebenarnya, kedua rasio ini setara. Coba lihat bahwa jika kita membagi 15:9 dengan 3, hasilnya adalah 5:3, yang menunjukkan perbandingan yang sama. Karena kedua rasio ini setara, kita bisa menuliskannya sebagai 15:9 = 5:3.", nextStep: 6 },
+        ],
+    },
+    {
+        message: "Sekarang mari kita coba dengan contoh yang berbeda. Misalkan kamu memiliki dua rasio, 12:8 dan 6:5. Menurutmu, apakah kedua rasio ini setara?",
+        options: [
+            { text: "Ya, keduanya setara.", response: "Tidak tepat. Kedua rasio ini tidak setara. Jika kita menyederhanakan 12:8 dengan membaginya dengan 4, kita mendapatkan 3:2. Namun, 6:5 tidak bisa disederhanakan menjadi 3:2, jadi mereka memiliki perbandingan yang berbeda.", nextStep: 7 },
+            { text: "Tidak, keduanya tidak setara.", response: "Betul sekali! Kedua rasio ini tidak setara. Jika kita menyederhanakan 12:8 dengan membaginya dengan 4, kita mendapatkan 3:2. Namun, rasio 6:5 tidak bisa disederhanakan menjadi 3:2, sehingga mereka tidak memiliki perbandingan yang sama.", nextStep: 7 },
+        ],
+    },
+    {
+        message: "Sekarang, setelah kita memahami konsep rasio yang setara, mari kita lihat bagaimana kita bisa menerapkannya dalam bentuk persamaan. Ketika kita memiliki rasio yang melibatkan variabel, kita dapat menggunakan metode tertentu untuk menemukan nilai dari variabel tersebut. Mari kita coba soal berikut untuk melihat bagaimana ini bekerja.",
+        options: [
+            { text: "Lanjut", response: "Lanjut", nextStep: 8 },
+        ],
+    },
+    {
+        message: "Jika ada persamaan x : 3 = 4 : 5, bagaimana cara kamu menemukan nilai x?",
+        options: [
+            { text: "Mengalikan silang x dengan 5 dan 3 dengan 4.", response: "Betul sekali! Dengan mengalikan silang, kita mendapatkan 5x = 12, jadi x = 12/5.", nextStep: 9 },
+            { text: "Mengurangi 3 dari 5 lalu mengalikan dengan x.", response: "Tidak, pengurangan tidak digunakan di sini. Coba pikirkan cara lain.", nextStep: 9 },
+            { text: "Membagi 4 dengan 5 lalu mengalikan dengan 3.", response: "Tidak, ini bukan langkah yang tepat untuk menyelesaikan persamaan ini.", nextStep: 9 },
+            { text: "Menambahkan 3 ke 5 dan kemudian membagi dengan 4.", response: "Tidak, kita tidak perlu menjumlahkan angka di sini. Coba ingat kembali konsep perkalian silang.", nextStep: 9 },
+        ],
+    },
+    {
+        message: "Sekarang, mari kita coba menerapkan konsep ini dalam beberapa contoh yang lebih dekat dengan kehidupan sehari-hari. Misalkan kamu sedang membuat jus jeruk. Resepnya mengatakan bahwa untuk setiap 4 bagian jus, kamu perlu menambahkan 5 bagian air. Jika kamu sudah menuangkan 12 bagian jus, berapa bagian air yang kamu butuhkan untuk mencampurnya sesuai dengan resep?",
+        options: [
+            { text: "20 bagian air.", response: "Tidak tepat. 20 bagian air terlalu banyak. Coba pikirkan kembali cara menyelesaikannya berdasarkan rasio yang diberikan.", nextStep: 10 },
+            { text: "15 bagian air.", response: "Tepat sekali! Jika kamu punya 12 bagian jus, maka kamu butuh 15 bagian air untuk mencampurnya dengan benar, berdasarkan rasio 4:5.", nextStep: 10 },
+            { text: "9 bagian air.", response: "Tidak, 9 bagian air tidak cukup. Ingat bahwa jumlah air harus lebih banyak dari jus.", nextStep: 10 },
+            { text: "12 bagian air.", response: "Tidak tepat, 12 bagian air akan membuat rasio jus dan air sama. Tapi ingat, rasio seharusnya 4:5, jadi kamu butuh lebih banyak air.", nextStep: 10 },
+        ],
+    },
+    {
+        message: "Bayangkan kamu sedang mengisi bak mandi. Kamu ingin mencampur air panas dan air dingin dalam rasio 3:2. Jika kamu sudah menuangkan 15 liter air panas, berapa liter air dingin yang perlu kamu tambahkan?",
+        options: [
+            { text: "10 liter.", response: "Betul sekali! Jika kamu punya 15 liter air panas, maka kamu butuh 10 liter air dingin untuk mendapatkan rasio 3:2.", nextStep: 11 },
+            { text: "20 liter.", response: "Tidak, 20 liter air dingin akan terlalu banyak. Coba pikirkan lagi bagaimana menyelesaikan persamaannya.", nextStep: 11 },
+            { text: "7 liter.", response: "Tidak tepat, 7 liter tidak cukup untuk mencapai rasio 3:2. Coba lagi!", nextStep: 11 },
+            { text: "5 liter.", response: "Tidak, 5 liter air dingin tidak cukup untuk mencampur dengan 15 liter air panas sesuai rasio 3:2. Coba hitung lagi.", nextStep: 11 },
+        ],
+    },
+    {
+        message: "Kamu sedang membuat campuran tanah dan pasir untuk menanam tanaman. Resepnya mengatakan bahwa kamu harus mencampur 2 bagian tanah dengan 3 bagian pasir. Jika kamu punya 8 bagian tanah, berapa bagian pasir yang kamu perlukan?",
+        options: [
+            { text: "10 bagian pasir.", response: "Tidak, 10 bagian pasir tidak sesuai dengan rasio 2:3 yang diperlukan. Coba lagi!", nextStep: 12 },
+            { text: "6 bagian pasir.", response: "Tidak tepat, 6 bagian pasir tidak cukup untuk mencampur dengan 8 bagian tanah sesuai rasio 2:3.", nextStep: 12 },
+            { text: "12 bagian pasir.", response: "Tepat! Jika kamu punya 8 bagian tanah, kamu butuh 12 bagian pasir untuk mencapai rasio 2:3.", nextStep: 12 },
+            { text: "8 bagian pasir.", response: "Salah, jika kamu punya 8 bagian tanah, pasir harus lebih banyak sesuai dengan rasio 2:3. Coba hitung kembali.", nextStep: 12 },
+        ],
+    },
+    {
+        message: "Sekarang kita sudah mempelajari bagaimana menggunakan perbandingan dan rasio dalam persamaan linear. Sebelum kita akhiri, apakah ada yang ingin kamu tanyakan?",
+        options: [
+            { text: "Tidak, saya sudah paham.", response: "Senang mendengarnya!", nextStep: 15 },
+            { text: "Bisakah kita mengulang bagian tentang mengalikan silang?", response: "Tentu saja, mari kita ulang kembali bagian tersebut dengan membahasnya lebih lanjut. Jangan sungkan bertanya kepada gurumu, ya!", nextStep: 15 },
+            { text: "Bolehkah saya mendapat lebih banyak soal latihan?", response: "Tentu, saya akan memberikan beberapa soal tambahan untuk kamu latih.", nextStep: 13 },
+        ],
+    },
+    {
+        message: "Misalkan ada x : 9 = 4 : 3. Hitunglah nilai x.",
+        options: [
+            { text: "x = 3", response: "Salah, nilai x lebih besar dari 3. Coba hitung lagi.", nextStep: 14 },
+            { text: "x = 7.5", response: "Tidak benar, coba hitung kembali dengan menggunakan perkalian silang.", nextStep: 14 },
+            { text: "x = 6", response: "Hampir, tapi tidak tepat. Coba periksa lagi langkah-langkahnya.", nextStep: 14 },
+            { text: "x = 12", response: "Tepat! Dengan mengalikan silang, kita mendapatkan 4x = 36, sehingga x = 12.", nextStep: 14 },
+        ],
+    },
+    {
+        message: "Sekarang, mari kita coba soal cerita yang lebih kontekstual. Misalkan kamu sedang memanggang kue dan ingin membuat adonan dengan mencampur tepung dan gula. Resepnya mengatakan bahwa rasio tepung terhadap gula adalah 5:2. Jika kamu sudah menyiapkan 6 cangkir gula, berapa cangkir tepung yang kamu butuhkan?",
+        options: [
+            { text: "10 cangkir", response: "Tidak, 10 cangkir tepung tidak cukup. Coba periksa kembali rasio 5:2 dan hitung lagi.", nextStep: 15 },
+            { text: "12 cangkir", response: "Tidak tepat. 12 cangkir terlalu sedikit untuk mencapai rasio 5:2 dengan 6 cangkir gula. Coba lagi!", nextStep: 15 },
+            { text: "15 cangkir", response: "Tepat sekali! Rasio 5:2 menunjukkan bahwa jika kamu memiliki 6 cangkir gula, kamu membutuhkan 15 cangkir tepung untuk mencampurnya dengan benar.", nextStep: 15 },
+            { text: "8 cangkir", response: "Salah, 8 cangkir tepung tidak sesuai dengan rasio 5:2. Ingat bahwa kamu butuh lebih banyak tepung dibandingkan gula.", nextStep: 15 },
+        ],
+    },
+    {
+        message: "Kamu sudah bekerja dengan sangat baik hari ini! Saya senang melihat bagaimana kamu bisa menerapkan konsep rasio dan persamaan dalam berbagai situasi. Tetaplah berusaha, karena setiap langkah yang kamu ambil membawa kamu lebih dekat untuk menguasai materi ini. Sampai jumpa di pelajaran berikutnya, dan tetap semangat belajar!",
+        options: [],
+    },
+];
  
-export default {stepsMateri1, stepsMateri2};
+export default {stepsMateri1, stepsMateri2, stepsMateri3};

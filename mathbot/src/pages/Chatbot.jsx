@@ -86,7 +86,7 @@ const Chatbot = () => {
             {/* Header */}
             <div className="p-4">
                 <h1 className="text-purple-700 font-bold text-lg">RAPERBOT</h1>
-                <p className="text-sm text-gray-500">Rasio Dan Perbandingan</p>
+                <p className="text-sm text-gray-500">Rasio dan Perbandingan</p>
             </div>
 
             <div className="flex-grow p-4 overflow-y-auto">
@@ -186,8 +186,7 @@ const Chatbot = () => {
                                 }
                                 className="bg-purple-500 text-white py-2 px-4 rounded-lg w-full mb-4"
                             >
-                                Materi 3: Memahami Perbandingan dan Rasio
-                                Menggunakan Persamaan Linear
+                                Materi 3: Memahami Hubungan Rasio Menggunakan Persamaan Linear
                             </button>
                             <button
                                 onClick={() =>

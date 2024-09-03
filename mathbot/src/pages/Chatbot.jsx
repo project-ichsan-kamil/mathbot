@@ -26,6 +26,8 @@ const Chatbot = () => {
       return steps.stepsMateri2;
     } else if (selectedMaterial === 'materi3') {
       return steps.stepsMateri3; 
+    }else if (selectedMaterial === 'latihan') {
+      return steps.latihan; 
     }
     return [];
   };
@@ -153,10 +155,16 @@ const Chatbot = () => {
                 Materi 2: Menyederhanakan dan Membandingkan Rasio
               </button>
               <button
-                onClick={() => handleMaterialSelection('materi3')}
-                className="bg-blue-500 text-white py-2 px-4 rounded-lg w-full"
+                onClick={() => handleMaterialSelection('materi2')}
+                className="bg-blue-500 text-white py-2 px-4 rounded-lg w-full mb-4"
               >
                 Materi 3: Memahami Perbandingan dan Rasio Menggunakan Persamaan Linear
+              </button>
+              <button
+                onClick={() => handleMaterialSelection('latihan')}
+                className="bg-blue-500 text-white py-2 px-4 rounded-lg w-full"
+              >
+                Latihan Soal
               </button>
             </div>
           </div>

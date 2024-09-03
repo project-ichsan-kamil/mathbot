@@ -65,7 +65,7 @@ const Chatbot = () => {
                 ...responses,
                 {
                     message: `Terima kasih ${userData.name}, Berikut data yang kamu masukkan:`,
-                    response: `Nama: ${userData.name}, Sekolah: ${userData.school}`,
+                    response: `Nama: ${userData.name}, Kelas: ${userData.school}`,
                 },
             ]);
             setIsUserDataEntered(true);
@@ -121,7 +121,7 @@ const Chatbot = () => {
                             <form onSubmit={handleUserDataSubmit}>
                                 <div className="mb-4">
                                     <label className="block text-gray-700">
-                                        Siapa namamu ?
+                                        Siapa namamu?
                                     </label>
                                     <input
                                         type="text"
@@ -135,7 +135,7 @@ const Chatbot = () => {
                                 </div>
                                 <div className="mb-4">
                                     <label className="block text-gray-700">
-                                        Kelas Berapa?
+                                        Kelas berapa?
                                     </label>
                                     <input
                                         type="number"

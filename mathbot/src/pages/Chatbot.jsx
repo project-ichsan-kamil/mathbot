@@ -13,13 +13,11 @@ const Chatbot = () => {
     if (isTyping) {
       const timer = setTimeout(() => {
         setIsTyping(false);
-        if (step < getSteps().length) {
-          setStep((prevStep) => prevStep + 1);
-        }
-      }, 100);
+      }, 100); // Menunggu 1 detik sebelum menyelesaikan typing
       return () => clearTimeout(timer);
     }
   }, [isTyping]);
+  
 
   const getSteps = () => {
     if (selectedMaterial === 'materi1') {
@@ -27,15 +25,31 @@ const Chatbot = () => {
     } else if (selectedMaterial === 'materi2') {
       return steps.stepsMateri2;
     } else if (selectedMaterial === 'materi3') {
-      return steps.stepsMateri3; // Materi 3 ditambahkan di sini
+      return steps.stepsMateri3; 
     }
     return [];
   };
 
   const handleOptionClick = (option) => {
+    console.log("Current step:", step);
+    console.log("Selected option:", option);
+    // Tambahkan respons pengguna ke daftar
     setResponses([...responses, { message: getSteps()[step].message, response: option.response }]);
+    
+    // Set isTyping menjadi true untuk memulai delay sebelum pindah ke langkah berikutnya
     setIsTyping(true);
+  
+    const steps = getSteps();
+  
+    if (option.isFinish) {
+      // Jika isFinish true, langsung loncat ke step terakhir
+      setStep(steps.length - 1);
+    } else {
+      // Jika isFinish false, lanjut ke nextStep
+      setStep(option.nextStep);
+    }
   };
+  
 
   const handleInputChange = (e) => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
@@ -56,11 +70,11 @@ const Chatbot = () => {
 
   const handleMaterialSelection = (material) => {
     setSelectedMaterial(material);
-    setStep(0); // Mulai dari step pertama
-    setResponses([]); // Reset responses saat memulai materi baru
-    setIsTyping(false); // Pastikan bot tidak dalam status mengetik
+    setStep(0);
+    setResponses([]);
+    setIsTyping(false);
   };
-  
+
   return (
     <div className="flex flex-col h-screen bg-gray-100">
       <div className="flex-grow p-4 overflow-y-auto">
@@ -108,7 +122,7 @@ const Chatbot = () => {
                     name="school"
                     value={userData.school}
                     onChange={handleInputChange}
-                    placeholder="...pilih kelasmu..."
+                    placeholder="...isi nama sekolahmu..."
                     className="w-full p-2 border rounded-lg focus:outline-none"
                     required
                   />
@@ -152,7 +166,6 @@ const Chatbot = () => {
               <div className="flex justify-start">
                 <div className="bg-blue-500 text-white rounded-lg p-3 max-w-xs">
                   {getSteps()[step].message}
-                  {/* Render gambar di dalam balon chat jika ada */}
                   {getSteps()[step].image && (
                     <img src={getSteps()[step].image} alt="Chat Image" className="rounded-lg mt-2" />
                   )}
@@ -186,4 +199,5 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
+
 

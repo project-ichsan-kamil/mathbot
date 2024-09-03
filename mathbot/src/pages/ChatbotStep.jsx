@@ -170,9 +170,7 @@ const stepsMateri1 = [
     },
     {
       message: "Kamu sudah bekerja dengan sangat baik hari ini! Sekarang kamu tahu bahwa rasio adalah cara untuk membandingkan dua jumlah atau lebih, dan kamu juga tahu bagaimana menyederhanakan rasio.",
-      options: [
-        { text: "Lanjut", response: "Terima kasih sudah belajar!", nextStep: 13, isFinish: true },
-      ],
+      options: [],
     },
   ];
   

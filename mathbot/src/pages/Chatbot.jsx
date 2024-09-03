@@ -93,12 +93,14 @@ const Chatbot = () => {
                 {responses.map((item, index) => (
                     <div key={index} className="mb-4">
                         <div className="flex justify-start">
-                            <div className="bg-blue-500 text-white rounded-lg p-3 max-w-xs">
+                            {/* Ubah warna background dan text pesan dari bot */}
+                            <div className="bg-purple-200 text-purple-700 rounded-lg p-3 max-w-xs">
                                 {item.message}
                             </div>
                         </div>
                         <div className="flex justify-end mt-2">
-                            <div className="bg-green-500 text-white rounded-lg p-3 max-w-xs">
+                            {/* Ubah warna background dan text pesan dari user */}
+                            <div className="bg-purple-500 text-white rounded-lg p-3 max-w-xs">
                                 {item.response}
                             </div>
                         </div>
@@ -127,7 +129,7 @@ const Chatbot = () => {
                                         value={userData.name}
                                         onChange={handleInputChange}
                                         placeholder="Nama"
-                                        className="w-full p-2 px-5 border rounded-full focus:outline-none"
+                                        className="w-full p-2 px-5 bg-purple-100 border border-purple-300 rounded-full focus:outline-none"
                                         required
                                     />
                                 </div>
@@ -141,7 +143,7 @@ const Chatbot = () => {
                                         value={userData.school}
                                         onChange={handleInputChange}
                                         placeholder="Kelas"
-                                        className="w-full p-2 px-5 border rounded-full focus:outline-none"
+                                        className="w-full p-2 px-5 bg-purple-100 border border-purple-300 rounded-full focus:outline-none"
                                         inputMode="numeric"
                                         required
                                     />
@@ -157,7 +159,7 @@ const Chatbot = () => {
                     </div>
                 ) : !selectedMaterial ? (
                     <div className="flex justify-start mb-4">
-                        <div className="bg-blue-100 text-gray-900 rounded-lg p-6 w-full max-w-xs shadow-md">
+                        <div className="bg-purple-200 text-gray-900 rounded-lg p-6 w-full max-w-xs shadow-md">
                             <h2 className="text-lg font-bold mb-4">
                                 Pilih Materi
                             </h2>
@@ -165,7 +167,7 @@ const Chatbot = () => {
                                 onClick={() =>
                                     handleMaterialSelection("materi1")
                                 }
-                                className="bg-blue-500 text-white py-2 px-4 rounded-lg w-full mb-4"
+                                className="bg-purple-500 text-white py-2 px-4 rounded-lg w-full mb-4"
                             >
                                 Materi 1: Pengantar Rasio
                             </button>
@@ -173,16 +175,16 @@ const Chatbot = () => {
                                 onClick={() =>
                                     handleMaterialSelection("materi2")
                                 }
-                                className="bg-blue-500 text-white py-2 px-4 rounded-lg w-full mb-4"
+                                className="bg-purple-500 text-white py-2 px-4 rounded-lg w-full mb-4"
                             >
                                 Materi 2: Menyederhanakan dan Membandingkan
                                 Rasio
                             </button>
                             <button
                                 onClick={() =>
-                                    handleMaterialSelection("materi2")
+                                    handleMaterialSelection("materi3")
                                 }
-                                className="bg-blue-500 text-white py-2 px-4 rounded-lg w-full mb-4"
+                                className="bg-purple-500 text-white py-2 px-4 rounded-lg w-full mb-4"
                             >
                                 Materi 3: Memahami Perbandingan dan Rasio
                                 Menggunakan Persamaan Linear
@@ -191,7 +193,7 @@ const Chatbot = () => {
                                 onClick={() =>
                                     handleMaterialSelection("latihan")
                                 }
-                                className="bg-blue-500 text-white py-2 px-4 rounded-lg w-full"
+                                className="bg-purple-500 text-white py-2 px-4 rounded-lg w-full"
                             >
                                 Latihan Soal
                             </button>
@@ -201,7 +203,7 @@ const Chatbot = () => {
                     getSteps()[step] && (
                         <div className="mb-4">
                             <div className="flex justify-start">
-                                <div className="bg-blue-500 text-white rounded-lg p-3 max-w-xs">
+                                <div className="bg-purple-200 text-purple-700 rounded-lg p-3 max-w-xs">
                                     {getSteps()[step].message}
                                     {getSteps()[step].image && (
                                         <img

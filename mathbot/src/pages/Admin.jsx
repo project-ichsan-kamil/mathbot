@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Layout, Menu, Table, Dropdown, Avatar, Input, Button, Select } from 'antd';
 import { UserOutlined, LogoutOutlined, DeleteOutlined, SearchOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import { fetchData, deleteData } from '../components/ApiService';
 
 const { Header, Sider, Content } = Layout;
 const { Search } = Input;
@@ -10,50 +11,62 @@ const { Option } = Select;
 const Admin = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [pageSize, setPageSize] = useState(10); // Default pagination size
-  const [data, setData] = useState([
-    {
-      key: '1',
-      no: '1',
-      nama: 'John Doe',
-      kelas: 'A',
-      score: 85,
-      soal1: '10',
-      soal2: '9',
-      soal3: '8',
-      soal4: '7',
-      soal5: '9',
-      soal6: '10',
-      soal7: '9',
-      soal8: '9',
-      soal9: '8',
-      soal10: '6',
-    },
-    // Tambahkan lebih banyak data untuk testing pagination
-  ]);
-
+  const [data, setData] = useState([]); // Data from API
   const [searchText, setSearchText] = useState('');
+  const [loading, setLoading] = useState(false); // Loading state for data fetching
 
-  // Fungsi untuk handle delete
-  const handleDelete = (key) => {
-    setData(data.filter((item) => item.key !== key));
+  // Fetch data from API on component mount
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const loadData = async () => {
+    setLoading(true);
+    const responseData = await fetchData(); // Call fetchData from ApiService
+    const processedData = responseData.map((item, index) => ({
+      key: item.id, // Assume "id" is available in the API response
+      no: index + 1,
+      nama: item.nama,
+      kelas: item.kelas,
+      score: item.score,
+      soal1: item.soal1,
+      soal2: item.soal2,
+      soal3: item.soal3,
+      soal4: item.soal4,
+      soal5: item.soal5,
+      soal6: item.soal6,
+      soal7: item.soal7,
+      soal8: item.soal8,
+      soal9: item.soal9,
+      soal10: item.soal10,
+    }));
+    setData(processedData);
+    setLoading(false);
   };
 
-  // Fungsi untuk handle search
+  // Function to handle delete with API integration
+  const handleDelete = async (key) => {
+    await deleteData(key); // Call deleteData from ApiService
+    loadData(); // Reload data after deletion
+  };
+
+  // Function to handle search
   const handleSearch = (value) => {
     setSearchText(value.toLowerCase());
   };
 
-  // Data setelah filtering berdasarkan pencarian
+  // Data after filtering based on search
   const filteredData = data.filter((item) =>
     item.nama.toLowerCase().includes(searchText)
   );
 
-  // Kolom Tabel
+  // Table columns
   const columns = [
     {
       title: 'No',
       dataIndex: 'no',
       key: 'no',
+      render: (text, record, index) => index + 1, // Renders current index + 1
     },
     {
       title: 'Nama',
@@ -83,7 +96,7 @@ const Admin = () => {
           type="primary"
           danger
           icon={<DeleteOutlined />}
-          onClick={() => handleDelete(record.key)}
+          onClick={() => handleDelete(record.key)} // Call the handleDelete function
         >
           Delete
         </Button>
@@ -106,7 +119,7 @@ const Admin = () => {
     </Menu>
   );
 
-  // Fungsi untuk handle perubahan ukuran pagination
+  // Handle pagination size change
   const handlePageSizeChange = (value) => {
     setPageSize(value);
   };
@@ -116,7 +129,7 @@ const Admin = () => {
       <Sider
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
-        theme="light" // Mengubah tema sidebar menjadi light
+        theme="light"
       >
         <div className="logo h-16 text-white font-bold text-center flex items-center justify-center" style={{backgroundColor: "#dda0dd" }}>
           Admin Raperbot
@@ -134,7 +147,7 @@ const Admin = () => {
         <Content style={{ margin: '16px' }}>
           <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
             <div style={{ marginBottom: 16, display: 'flex', justifyContent: 'space-between' }}>
-            <Select defaultValue={10} onChange={handlePageSizeChange}>
+              <Select defaultValue={10} onChange={handlePageSizeChange}>
                 <Option value={10}>10</Option>
                 <Option value={25}>25</Option>
                 <Option value={50}>50</Option>
@@ -145,13 +158,13 @@ const Admin = () => {
                 onSearch={handleSearch}
                 style={{ width: 300 }}
               />
-             
             </div>
             <Table
               columns={columns}
               dataSource={filteredData}
+              loading={loading} // Show loading spinner while fetching data
               pagination={{ pageSize }}
-              rowKey="no"
+              rowKey="key"
             />
           </div>
         </Content>

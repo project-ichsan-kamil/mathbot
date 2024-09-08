@@ -1,8 +1,9 @@
 import axios from "axios";
 import { notification } from "antd";
 
-const localUrl = "http://localhost:3100";
-const prodUrl = "https://raperbot.my.id/api";
+const baseUrl = "https://raperbot.my.id/api";
+// const baseUrl = "http://localhost:3100";
+// const prodUrl = "https://raperbot.my.id/api";
 
 // Helper function to convert data into the required format
 const convertDataForAPI = (userData, score, responses) => {
@@ -29,7 +30,7 @@ export const submitScore = async (userData, score, responses) => {
 
     try {
         // Send the POST request with the formatted data
-        await axios.post(`${localUrl}/answers`, submissionData);
+        await axios.post(`${baseUrl}/answers`, submissionData);
 
         // Show success notification
         notification.success({
@@ -52,7 +53,7 @@ export const submitScore = async (userData, score, responses) => {
 // Function to fetch data for admin
 export const fetchData = async () => {
     try {
-        const response = await axios.get(`${localUrl}/answers`);
+        const response = await axios.get(`${baseUrl}/answers`);
         return response.data.data; // Return the data for further processing
     } catch (error) {
         console.error("Error fetching data:", error);
@@ -68,7 +69,7 @@ export const fetchData = async () => {
 // Function to delete data for admin
 export const deleteData = async (id) => {
     try {
-        await axios.delete(`${localUrl}/answers?id=${id}`);
+        await axios.delete(`${baseUrl}/answers?id=${id}`);
         // Show success notification
         notification.success({
             message: "Success!",

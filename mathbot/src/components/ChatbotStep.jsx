@@ -215,13 +215,29 @@ export const getSteps = (material) => {
         ],
         materi2: [
             {
-                message:
-                    "Hai, selamat datang kembali! Minggu lalu, kita belajar tentang rasio. Masih ingat apa itu rasio?",
+                message:[
+                    "Hai, selamat datang kembali!", 
+                    "Pada materi sebelumnya, kita sudah belajar tentang rasio. Masih ingat apa itu rasio?",
+                ],
                 options: [
                     {
-                        text: "Rasio adalah perbandingan antara dua jumlah.",
+                        text: "Rasio adalah perbandingan antara dua jumlah..",
                         response:
                             "Tepat sekali! Rasio adalah cara untuk membandingkan dua jumlah atau lebih.",
+                        nextStep: 1,
+                        isFinish: false,
+                    },
+                    {
+                        text: "Rasio adalah pembagian antara dua angka.",
+                        response:
+                            "Hampir tepat, tapi rasio tidak sama dengan pembagian. Mari kita ingat bersama, rasio adalah perbandingan antara dua jumlah atau lebih.",
+                        nextStep: 1,
+                        isFinish: false,
+                    },
+                    {
+                        text: "Rasio adalah jumlah total dari dua angka.",
+                        response:
+                            "Tidak tepat, rasio tidak berarti jumlah total dari dua angka. Mari kita ingat lagi, rasio adalah perbandingan antara dua jumlah atau lebih.",
                         nextStep: 1,
                         isFinish: false,
                     },
@@ -235,8 +251,9 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Masih ingatkah pada materi sebelumnya kita juga telah belajar tentang bagaimana menyederhanakan rasio? Hari ini, kita akan membahasnya lebih dalam lagi agar kamu lebih paham dan bisa menggunakannya dengan lebih baik.",
+                message:[
+                    "Masih ingatkah pada materi sebelumnya kita juga telah belajar tentang bagaimana menyederhanakan rasio?", "Hari ini, kita akan membahasnya lebih dalam lagi agar kamu lebih paham dan bisa menggunakannya dengan lebih baik."
+                ],
                 options: [
                     {
                         text: "Lanjut",
@@ -247,8 +264,9 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
+                message:[
                     "Jika kamu punya rasio 6:4, menurutmu bagaimana caranya menyederhanakan rasio ini? Apakah kamu bisa memikirkan cara untuk membuat angka-angka ini lebih kecil tetapi tetap mempertahankan perbandingannya?",
+                ],
                 options: [
                     {
                         text: "Membagi keduanya dengan 2.",
@@ -267,13 +285,15 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Mari kita coba dengan contoh lain. Misalkan ada 12 siswa laki-laki dan 8 siswa perempuan di kelas. Bagaimana kamu menuliskan rasio siswa laki-laki dengan siswa perempuan?",
+                message:[
+                    "Mari kita coba dengan contoh lain.",
+                    "Misalkan ada 12 siswa laki-laki dan 8 siswa perempuan di kelas. Bagaimana kamu menuliskan rasio siswa laki-laki dengan siswa perempuan?"
+                ],
                 options: [
                     {
                         text: "Rasionya adalah 12:8.",
                         response:
-                            "Benar! Rasio 12:8 menunjukkan bahwa ada 12 siswa laki-laki dan 8 siswa perempuan. Kamu bisa menyederhanakan rasio ini menjadi 3:2 dengan membagi kedua angka dengan 4. Apakah kamu melihat bagaimana penyederhanaan ini mempermudah perbandingan?",
+                            "Benar! Rasio 12:8 menunjukkan bahwa ada 12 siswa laki-laki dan 8 siswa perempuan. Kamu bisa menyederhanakan rasio ini menjadi 3:2 dengan membagi kedua angka dengan 4.",
                         nextStep: 4,
                         isFinish: false,
                     },
@@ -287,8 +307,10 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Sekarang saatnya latihan! Jika ada 18 siswa yang suka olahraga dan 12 siswa yang suka seni, bagaimana kamu menuliskan rasio siswa yang suka olahraga dengan siswa yang suka seni?",
+                message:[
+                    "Sekarang saatnya latihan!",
+                    "Jika ada 18 siswa yang suka olahraga dan 12 siswa yang suka seni, bagaimana kamu menuliskan rasio siswa yang suka olahraga dengan siswa yang suka seni?",
+                ],
                 options: [
                     {
                         text: "Rasionya adalah 18:12.",
@@ -321,8 +343,9 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
+                message:[
                     "Sekarang, bagaimana jika kita punya dua rasio: 18:12 dan 3:2. Menurutmu, apakah kedua rasio ini sama atau berbeda?",
+                ],
                 options: [
                     {
                         text: "Mereka sama.",
@@ -341,13 +364,15 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Mari kita coba lagi dengan contoh lain. Misalkan di kelas pertama ada 24 siswa laki-laki dan 16 siswa perempuan, sedangkan di kelas kedua ada 12 siswa laki-laki dan 8 siswa perempuan. Apakah rasio siswa laki-laki dengan siswa perempuan di kedua kelas ini sama atau berbeda?",
+                message:[
+                    "Mari kita coba lagi dengan contoh lain.",
+                    "Misalkan di kelas pertama ada 24 siswa laki-laki dan 16 siswa perempuan, sedangkan di kelas kedua ada 12 siswa laki-laki dan 8 siswa perempuan. Apakah rasio siswa laki-laki dengan siswa perempuan di kedua kelas ini sama atau berbeda?",
+                ],
                 options: [
                     {
                         text: "Rasionya sama, yaitu 3:2.",
                         response:
-                            "Jawaban yang benar adalah bahwa rasio di kedua kelas sama, yaitu 3:2. Walaupun jumlah siswa berbeda, perbandingan antara laki-laki dan perempuan tetap sama di kedua kelas ini.",
+                            "Benar! Di kedua kelas, kita bisa menyederhanakan rasionya menjadi 3:2. Walaupun jumlah siswa berbeda, rasio antara laki-laki dan perempuan di kedua kelas ini tetap sama.",
                         nextStep: 7,
                         isFinish: false,
                     },
@@ -361,8 +386,11 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Sekarang giliranmu untuk mencoba. Jika ada 30 rumah tangga yang memiliki mobil dan 20 rumah tangga yang tidak memiliki mobil, dan di kota lain ada 15 rumah tangga yang memiliki mobil dan 10 rumah tangga yang tidak memiliki mobil, apakah rasio kepemilikan mobil di kedua kota ini sama?",
+                message:[
+                    "Sekarang giliranmu untuk mencoba.", 
+                    "Jika ada 30 rumah tangga yang memiliki mobil dan 20 rumah tangga yang tidak memiliki mobil, dan di kota lain ada 15 rumah tangga yang memiliki mobil dan 10 rumah tangga yang tidak memiliki mobil, apakah rasio kepemilikan mobil di kedua kota ini sama?",
+                ],
+                image: image.mathbot_1_1, //TODO change
                 options: [
                     {
                         text: "Ya, rasionya sama.",
@@ -381,20 +409,33 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Kamu telah membuat kemajuan besar hari ini! Sekarang kamu tahu bagaimana menyederhanakan rasio dan membandingkan rasio yang berbeda. Ini akan sangat membantu kamu dalam menyelesaikan soal-soal perbandingan di masa depan.",
+                message:[
+                    "Mari kita coba satu soal lagi.", 
+                    "Di Taman A, ada 50 pohon mangga dan 25 pohon jambu. Di Taman B, ada 60 pohon mangga dan 40 pohon jambu. Apakah rasio jumlah pohon mangga terhadap pohon jambu di kedua taman ini sama?",
+                ],
+                image: image.mathbot_1_1, //TODO change
                 options: [
                     {
-                        text: "Lanjut",
-                        response: "Lanjut",
+                        text: "Ya, rasionya sama.",
+                        response:
+                            "Tidak tepat. Mari kita hitung bersama. Rasio 50:25 di Taman A bisa disederhanakan menjadi 2:1, sedangkan rasio 60:40 di Taman B bisa disederhanakan menjadi 3:2. Karena 2:1 dan 3:2 berbeda, maka rasio jumlah pohon mangga terhadap pohon jambu di kedua taman ini tidak sama.",
+                        nextStep: 9,
+                        isFinish: false,
+                    },
+                    {
+                        text: "Tidak, rasionya berbeda.",
+                        response:
+                            "Tepat sekali! Rasio 50:25 di Taman A bisa disederhanakan menjadi 2:1, sedangkan rasio 60:40 di Taman B bisa disederhanakan menjadi 3:2. Karena 2:1 dan 3:2 berbeda, maka rasio jumlah pohon mangga terhadap pohon jambu di kedua taman ini tidak sama.",
                         nextStep: 9,
                         isFinish: false,
                     },
                 ],
             },
             {
-                message:
+                message:[
+                    "Kita telah mempelajari bagaimana cara menyederhanakan rasio dan membandingkan rasio",
                     "Sebelum kita akhiri, apakah ada sesuatu yang ingin kamu tanyakan?",
+                ],
                 options: [
                     {
                         text: "Tidak, saya merasa sudah paham semuanya.",
@@ -427,8 +468,10 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Mari kita coba soal berikut ini. Misalkan ada 7.5 liter jus jeruk dan 5 liter jus apel. Bagaimana kamu menuliskan rasio jumlah jus jeruk dengan jus apel?",
+                message:[
+                    "Mari kita coba soal berikut ini.", 
+                    "Misalkan ada 7.5 liter jus jeruk dan 5 liter jus apel. Bagaimana kamu menuliskan rasio jumlah jus jeruk dengan jus apel?",
+                ],
                 options: [
                     {
                         text: "Rasionya adalah 7.5:5.",
@@ -461,8 +504,10 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Sekarang mari kita lihat lebih dalam. Dalam soal sebelumnya, rasio 7.5:5 disederhanakan menjadi 3:2. Apa artinya rasio 3:2 ini?",
+                message:[
+                    "Sekarang mari kita lihat lebih dalam.",
+                    "Pada soal sebelumnya, rasio 7.5:5 disederhanakan menjadi 3:2. Apa artinya rasio 3:2 ini?"
+                ],
                 options: [
                     {
                         text: "Ini berarti untuk setiap 3 liter jus jeruk, ada 2 liter jus apel.",
@@ -494,12 +539,17 @@ export const getSteps = (material) => {
                     },
                 ],
             },
-            {
-                message:
-                    "Kamu sudah bekerja dengan sangat baik hari ini! Sekarang kamu tahu bahwa rasio adalah cara untuk membandingkan dua jumlah atau lebih, dan kamu juga tahu bagaimana menyederhanakan rasio.",
+             {
+                message:[
+                    "Kamu telah membuat kemajuan besar hari ini!",
+                    "Sekarang kamu tahu bagaimana menyederhanakan rasio dan membandingkan rasio yang berbeda. Ini akan sangat membantu kamu dalam menyelesaikan soal-soal perbandingan di masa depan.",
+                    "Sampai bertemu di pertemuan berikutnya!"
+                ],
                 options: [],
             },
         ],
+
+        
         materi3: [
             {
                 message:

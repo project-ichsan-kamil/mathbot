@@ -1,11 +1,15 @@
+import { message } from "antd";
 import image from "../assets/img/index";
 
 export const getSteps = (material) => {
     const steps = {
         materi1: [
             {
-                message:
-                    "Hai! Hari ini kita akan berbicara tentang sesuatu yang sering kita lakukan tanpa kita sadari. Pernahkah kamu membagi sesuatu dengan temanmu? Misalnya, membagi kue atau permen. Bagaimana kamu biasanya membaginya?",
+                message: [
+                    "Hai [Nama Siswa]!",
+                    "Hari ini kita akan berbicara tentang sesuatu yang sering kita lakukan tanpa kita sadari. Pernahkah kamu membagi sesuatu dengan temanmu?",
+                    "Misalnya, membagi kue atau permen. Bagaimana kamu biasanya membaginya?",
+                ],
                 image: image.mathbot_1_1,
                 options: [
                     {
@@ -26,8 +30,9 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
+                message: [
                     "Sekarang, bagaimana kalau kamu punya 4 kue, dan temanmu hanya punya 2 kue? Menurutmu, apakah pembagian ini adil?",
+                ],
                 options: [
                     {
                         text: "Tidak, itu tidak adil.",
@@ -48,8 +53,10 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Bagus, mari kita lihat lagi. Jika kita membandingkan jumlah kue yang kamu miliki dengan jumlah kue temanmu, apa yang bisa kamu katakan tentang perbandingan ini?",
+                message: [
+                    "Bagus, mari kita lihat lagi.",
+                    "Jika kita membandingkan jumlah kue yang kamu miliki dengan jumlah kue temanmu, apa yang bisa kamu katakan tentang perbandingan ini?",
+                ],
                 options: [
                     {
                         text: "Jumlah kue saya dua kali lebih banyak.",
@@ -72,13 +79,20 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
+                message: [
                     "Sekarang, bagaimana kalau kita mengatakan bahwa jumlah kue kamu dibandingkan dengan jumlah kue temanmu adalah 4:2? Apa artinya menurutmu?",
+                ],
                 options: [
                     {
                         text: "Itu berarti saya punya 4 kue dan teman saya punya 2.",
                         response:
                             "Benar! 4:2 berarti kamu punya 4 kue dan temanmu punya 2 kue.",
+                        nextStep: 4,
+                    },
+                    {
+                        text: "Itu berarti saya punya 2 kue dan teman saya punya 4 kue.",
+                        response:
+                            "Tidak, 4:2 berarti kamu punya lebih banyak kue daripada temanmu, bukan sebaliknya.",
                         nextStep: 4,
                     },
                     {
@@ -90,13 +104,18 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Mari kita tarik kesimpulan. Rasio adalah cara untuk membandingkan dua jumlah atau lebih. Dalam kasus ini, rasio 4:2 menunjukkan bahwa jumlah kue kamu dibandingkan dengan jumlah kue temanmu adalah 4 banding 2. Rasio juga bisa disederhanakan seperti yang kita lakukan dengan 4:2 menjadi 2:1.",
+                message: [
+                    "Mari kita tarik kesimpulan.",
+                    "Rasio adalah cara untuk membandingkan dua jumlah atau lebih.",
+                    "Dalam kasus ini, rasio 4:2 menunjukkan bahwa jumlah kue kamu dibandingkan dengan jumlah kue temanmu adalah 4 banding 2. ",
+                    "Rasio juga bisa disederhanakan seperti yang kita lakukan dengan 4:2 menjadi 2:1."
+                ],
                 options: [{ text: "Lanjut", response: "Lanjut", nextStep: 5 }],
             },
             {
-                message:
-                    "Sekarang kita coba satu contoh soal. Misalkan kamu punya 12 apel, dan temanmu punya 8 apel. Bagaimana kamu bisa menuliskan rasio jumlah apel kamu dengan apel temanmu?",
+                message:[
+                    "Sekarang kita coba satu contoh soal.", 
+                    "Misalkan kamu punya 12 apel, dan temanmu punya 8 apel. Bagaimana kamu bisa menuliskan rasio jumlah apel kamu dengan apel temanmu?"],
                 options: [
                     {
                         text: "Rasionya adalah 12:8.",
@@ -119,8 +138,9 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Sekarang saatnya kamu berlatih sendiri. Misalkan kamu punya 15 kelereng, dan temanmu punya 10 kelereng. Apa rasio jumlah kelereng kamu dengan jumlah kelereng temanmu?",
+                message:[
+                    "Sekarang saatnya kamu berlatih sendiri.", 
+                    "Misalkan kamu punya 15 kelereng, dan temanmu punya 10 kelereng. Apa rasio jumlah kelereng kamu dengan jumlah kelereng temanmu?"],
                 options: [
                     {
                         text: "15:10",
@@ -137,7 +157,7 @@ export const getSteps = (material) => {
                     {
                         text: "2:3",
                         response:
-                            "Hampir tepat, tapi penyederhanaan rasionya terbalik. Seharusnya perbandingannya adalah 15:10 dan dapat disederhanakan menjadi 3:2, bukan 2:3.",
+                            "Hampir tepat, tapi penyederhanaan rasionya terbalik. . Seharusnya rasio 15:10 dapat disederhanakan menjadi 3:2, bukan 2:3.",
                         nextStep: 7,
                     },
                     {
@@ -149,8 +169,9 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Perhatikan Gambar dibawah ini! Bagaimana kamu menuliskan rasio jumlah gelas berisi susu dengan jumlah gelas berisi coklat?",
+                message:[
+                    "Perhatikan Gambar dibawah ini!",
+                    "Bagaimana kamu menuliskan rasio jumlah gelas berisi susu dengan jumlah gelas berisi coklat?"],
                 image: image.mathbot_1_2,
                 options: [
                     {
@@ -174,19 +195,21 @@ export const getSteps = (material) => {
                     {
                         text: "3:2",
                         response:
-                            "Coba lagi! Rasio 3:2 tidak menggambarkan perbandingan jumlah gelas susu dan coklat yang kamu miliki. Pastikan kamu menghitung perbandingan yang benar.",
+                            "Coba lagi! Rasio 3:2 tidak menggambarkan perbandingan jumlah gelas susu dan coklat yang kamu miliki. Pastikan kamu menghitung rasionya dengan benar.",
                         nextStep: 8,
                     },
                 ],
             },
             {
-                message:
-                    "Kamu sudah bekerja dengan sangat baik hari ini! Sekarang kamu tahu bahwa rasio adalah cara untuk membandingkan dua jumlah atau lebih, dan kamu juga tahu bagaimana menyederhanakan rasio.",
+                message:[
+                    "Baiklah, kamu sudah bekerja dengan sangat baik pada materi ini ini!",
+                    "Sekarang kamu tahu bahwa rasio adalah cara untuk membandingkan dua jumlah atau lebih, dan kamu juga tahu bagaimana cara untuk menyederhanakan rasio."
+                ],
                 options: [{ text: "Lanjut", response: "Lanjut", nextStep: 9 }],
             },
             {
-                message:
-                    "Sampai jumpa di materi berikutnya di mana kita akan mempelajari lebih dalam tentang cara menyederhanakan dan membandingkan rasio!",
+                message:[
+                    "Sampai jumpa di materi berikutnya di mana kita akan mempelajari lebih dalam tentang cara menyederhanakan dan membandingkan rasio!"],
                 options: [],
             },
         ],

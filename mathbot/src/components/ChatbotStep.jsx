@@ -552,8 +552,9 @@ export const getSteps = (material) => {
         
         materi3: [
             {
-                message:
-                    "Hai, selamat datang di pertemuan hari ini! Kita akan mempelajari lebih dalam tentang bagaimana rasio dapat dihubungkan dengan persamaan linear. Sebelum kita mulai, apakah kamu sudah siap?",
+                message:[
+                    "Hai, selamat datang di pertemuan hari ini!",
+                    "Kita akan mempelajari lebih dalam tentang bagaimana rasio dapat dihubungkan dengan persamaan linear. Sebelum kita mulai, apakah kamu sudah siap?"],
                 options: [
                     {
                         text: "Ya, saya siap.",
@@ -569,8 +570,11 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Mari kita mulai dengan contoh sederhana. Ibumu membuat pempek menggunakan 300 gram tepung tapioka dan 90 gram ikan giling. Bagaimana kamu menuliskan rasio tepung tapioka dengan ikan giling?",
+                message:[
+                    "Mari kita mulai dengan contoh sederhana.",
+                    "Ibumu membuat pempek menggunakan 300 gram tepung tapioka dan 90 gram ikan giling. Bagaimana kamu menuliskan rasio tepung tapioka dengan ikan giling?"
+                ],
+                image : image.mathbot_1_1, //TODO change
                 options: [
                     {
                         text: "Rasionya adalah 300:90.",
@@ -599,8 +603,10 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Sekarang, kita akan menerapkan konsep ini ke dalam sebuah soal kontekstual. Misalkan rasio tepung tapioka terhadap ikan giling adalah 10:3. Apa arti dari rasio ini menurutmu?",
+                message:[
+                    "Sekarang, kita akan menerapkan konsep ini ke dalam sebuah soal kontekstual.",
+                    "Misalkan rasio tepung tapioka terhadap ikan giling adalah 10:3. Apa arti dari rasio ini menurutmu?"
+                ],
                 options: [
                     {
                         text: "Artinya, untuk setiap 10 bagian tepung tapioka, ada 3 bagian ikan giling.",
@@ -609,9 +615,9 @@ export const getSteps = (material) => {
                         nextStep: 3,
                     },
                     {
-                        text: "Artinya, ikan giling lebih banyak daripada tepung tapioka.",
+                        text: "Artinya, untuk setiap 3 bagian tepung tapioka, ada 10 bagian ikan giling.",
                         response:
-                            "Tidak benar, rasio menunjukkan bahwa tepung tapioka lebih banyak daripada ikan giling.",
+                            "Tidak tepat. Rasio 10:3 berarti tepung tapioka lebih banyak daripada ikan giling, bukan sebaliknya",
                         nextStep: 3,
                     },
                     {
@@ -621,34 +627,41 @@ export const getSteps = (material) => {
                         nextStep: 3,
                     },
                     {
-                        text: "Artinya, ikan giling hanya sedikit dibandingkan dengan tepung tapioka.",
+                        text: "Artinya, ikan giling lebih banyak daripada tepung tapioka.",
                         response:
-                            "Tidak tepat. Rasio 10:3 memang menunjukkan bahwa ikan giling lebih sedikit, tetapi jawabannya tidak lengkap.",
+                            "Tidak benar, rasio menunjukkan bahwa tepung tapioka lebih banyak daripada ikan giling.",
                         nextStep: 3,
                     },
                 ],
             },
             {
-                message:
-                    "Bagus! Sekarang kita akan belajar tentang konsep dua rasio yang sama. Misalkan terdapat dua rasio, yaitu a : b dan c : d. Jika nilai rasionya sama, kita katakan bahwa dua rasio tersebut sama dan dapat dinyatakan sebagai Hubungan yang menunjukkan rasio-rasio sama disebut perbandingan atau proporsi.",
+                message:[
+                    "Sekarang kita akan belajar tentang konsep dua rasio yang sama.",
+                    "Misalkan terdapat dua rasio, yaitu a : b dan c : d.",
+                    "Jika nilai rasionya sama, kita katakan bahwa dua rasio tersebut sama dan dapat dinyatakan sebagai",
+                    "Hubungan yang menunjukkan rasio-rasio sama disebut perbandingan atau proporsi."
+                ],
                 options: [{ text: "Lanjut", response: "Lanjut", nextStep: 4 }],
             },
             {
-                message:
-                    "Mari kita coba dengan contoh yang berkaitan dengan rasio yang sudah kita hitung tadi. Jika rasio tepung tapioka dengan ikan giling adalah 10:3, apakah kamu bisa menemukan rasio lain yang setara dengan 10:3?",
+                message:[
+                    "Mari kita coba dengan contoh yang berkaitan dengan rasio yang sudah kita hitung tadi.",
+                    "Jika rasio tepung tapioka dengan ikan giling adalah 10:3, apakah kamu bisa menemukan rasio lain yang setara dengan 10:3?",
+                ],
+                   
                 options: [
-                    {
-                        text: "Rasio 20:6.",
-                        response:
-                            "Tepat sekali! Rasio 20:6 setara dengan 10:3 karena jika kita membagi kedua angka pada rasio 20:6 dengan 2, kita mendapatkan 10:3.",
-                        nextStep: 5,
-                    },
                     {
                         text: "Rasio 5:2.",
                         response:
                             "Tidak, 5:2 tidak setara dengan 10:3. Rasio ini menunjukkan perbandingan yang berbeda. Coba lagi!",
                         nextStep: 5,
                     },
+                    {
+                        text: "Rasio 20:6.",
+                        response:
+                            "Tepat sekali! Rasio 20:6 setara dengan 10:3 karena jika kita membagi kedua angka pada rasio 20:6 dengan 2, kita mendapatkan 10:3.",
+                        nextStep: 5,
+                    },          
                     {
                         text: "Rasio 30:10.",
                         response:
@@ -664,8 +677,10 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Sekarang mari kita periksa lebih jauh. Misalkan kamu memiliki dua rasio, 15:9 dan 5:3. Menurutmu, apakah kedua rasio ini setara?",
+                message:[
+                    "Sekarang mari kita pelajari lebih jauh.",
+                    "Misalkan kamu memiliki dua rasio, 15:9 dan 5:3. Menurutmu, apakah kedua rasio ini setara?"
+                ],
                 options: [
                     {
                         text: "Ya, keduanya setara.",
@@ -682,8 +697,10 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Sekarang mari kita coba dengan contoh yang berbeda. Misalkan kamu memiliki dua rasio, 12:8 dan 6:5. Menurutmu, apakah kedua rasio ini setara?",
+                message:[
+                    "Mari kita coba dengan contoh yang berbeda",
+                    "Misalkan kamu memiliki dua rasio, 12:8 dan 6:5. Menurutmu, apakah kedua rasio ini setara?"
+                ],
                 options: [
                     {
                         text: "Ya, keduanya setara.",
@@ -700,8 +717,11 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Sekarang, setelah kita memahami konsep rasio yang setara, mari kita lihat bagaimana kita bisa menerapkannya dalam bentuk persamaan. Ketika kita memiliki rasio yang melibatkan variabel, kita dapat menggunakan metode tertentu untuk menemukan nilai dari variabel tersebut. Mari kita coba soal berikut untuk melihat bagaimana ini bekerja.",
+                message:[
+                    "Sekarang, setelah kita memahami konsep rasio yang setara, mari kita lihat bagaimana kita bisa menerapkannya dalam bentuk persamaan.",
+                    "Ketika kita memiliki rasio yang melibatkan variabel, kita dapat menggunakan metode tertentu untuk menemukan nilai dari variabel tersebut.",
+                    "Mari kita coba soal berikut untuk melihat bagaimana ini bekerja."
+                ],
                 options: [{ text: "Lanjut", response: "Lanjut", nextStep: 8 }],
             },
             {
@@ -735,8 +755,11 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Sekarang, mari kita coba menerapkan konsep ini dalam beberapa contoh yang lebih dekat dengan kehidupan sehari-hari. Misalkan kamu sedang membuat jus jeruk. Resepnya mengatakan bahwa untuk setiap 4 bagian jus, kamu perlu menambahkan 5 bagian air. Jika kamu sudah menuangkan 12 bagian jus, berapa bagian air yang kamu butuhkan untuk mencampurnya sesuai dengan resep?",
+                message:[
+                    "Sekarang, mari kita coba menerapkan konsep ini dalam beberapa contoh yang lebih dekat dengan kehidupan sehari-hari.",
+                    "Misalkan kamu sedang membuat jus jeruk. Resepnya mengatakan bahwa untuk setiap 4 bagian jus, kamu perlu menambahkan 5 bagian air. Jika kamu sudah menuangkan 12 bagian jus, berapa bagian air yang kamu butuhkan untuk mencampurnya sesuai dengan resep?",
+                ],
+                image: image.mathbot_1_1, //TODO change 
                 options: [
                     {
                         text: "20 bagian air.",
@@ -765,8 +788,11 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
+                message:[
+                    "Mari kita coba soal lain",
                     "Bayangkan kamu sedang mengisi bak mandi. Kamu ingin mencampur air panas dan air dingin dalam rasio 3:2. Jika kamu sudah menuangkan 15 liter air panas, berapa liter air dingin yang perlu kamu tambahkan?",
+                ],
+                image: image.mathbot_1_1, //TODO change
                 options: [
                     {
                         text: "10 liter.",
@@ -795,8 +821,11 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
+                message:[
+                    "Kita coba satu soal lagi!",
                     "Kamu sedang membuat campuran tanah dan pasir untuk menanam tanaman. Resepnya mengatakan bahwa kamu harus mencampur 2 bagian tanah dengan 3 bagian pasir. Jika kamu punya 8 bagian tanah, berapa bagian pasir yang kamu perlukan?",
+                ],
+                image: image.mathbot_1_1, //TODO change
                 options: [
                     {
                         text: "10 bagian pasir.",
@@ -825,8 +854,9 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Sekarang kita sudah mempelajari bagaimana menggunakan perbandingan dan rasio dalam persamaan linear. Sebelum kita akhiri, apakah ada yang ingin kamu tanyakan?",
+                message:[
+                    "Sekarang kita sudah mempelajari bagaimana menggunakan perbandingan dan rasio dalam persamaan linear.","Sebelum kita akhiri, apakah ada yang ingin kamu tanyakan?",
+                ],
                 options: [
                     {
                         text: "Tidak, saya sudah paham.",
@@ -848,7 +878,9 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message: "Misalkan ada x : 9 = 4 : 3. Hitunglah nilai x.",
+                message: [
+                    "Misalkan ada x : 9 = 4 : 3. Hitunglah nilai x.",
+                ],
                 options: [
                     {
                         text: "x = 3",
@@ -877,8 +909,10 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Sekarang, mari kita coba soal cerita yang lebih kontekstual. Misalkan kamu sedang memanggang kue dan ingin membuat adonan dengan mencampur tepung dan gula. Resepnya mengatakan bahwa rasio tepung terhadap gula adalah 5:2. Jika kamu sudah menyiapkan 6 cangkir gula, berapa cangkir tepung yang kamu butuhkan?",
+                message:[
+                        "Sekarang, mari kita coba soal cerita yang lebih kontekstual.",
+                        "Misalkan kamu sedang memanggang kue dan ingin membuat adonan dengan mencampur tepung dan gula. Resepnya mengatakan bahwa rasio tepung terhadap gula adalah 5:2. Jika kamu sudah menyiapkan 6 cangkir gula, berapa cangkir tepung yang kamu butuhkan?",
+                    ],
                 options: [
                     {
                         text: "10 cangkir",
@@ -907,11 +941,16 @@ export const getSteps = (material) => {
                 ],
             },
             {
-                message:
-                    "Kamu sudah bekerja dengan sangat baik hari ini! Saya senang melihat bagaimana kamu bisa menerapkan konsep rasio dan persamaan dalam berbagai situasi. Tetaplah berusaha, karena setiap langkah yang kamu ambil membawa kamu lebih dekat untuk menguasai materi ini. Sampai jumpa di pelajaran berikutnya, dan tetap semangat belajar!",
+                message:[
+                    "Kamu sudah bekerja dengan sangat baik hari ini!",
+                    "Saya senang melihat bagaimana kamu bisa menerapkan konsep rasio dan persamaan dalam berbagai situasi.",
+                    "Tetaplah berusaha, karena setiap langkah yang kamu ambil membawa kamu lebih dekat untuk menguasai materi ini",
+                    "Sampai jumpa di pelajaran berikutnya, dan tetap semangat belajar!"
+                ],      
                 options: [],
             },
         ],
+        
         latihan: [
             {
                 message:

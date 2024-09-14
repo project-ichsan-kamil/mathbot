@@ -5,6 +5,7 @@ import MaterialSelection from "./MaterialSelection";
 import ScoreSummary from "./ScoreSummary";
 import { getSteps } from "./ChatbotStep";
 import { submitScore } from "./ApiService";
+import image from '../assets/img/index'
 
 const Chatbot = () => {
     const [step, setStep] = useState(0);
@@ -22,14 +23,14 @@ const Chatbot = () => {
         if (isTyping) {
             const timer = setTimeout(() => {
                 setIsTyping(false);
-            }, 100);
+            }, 1500);
             return () => clearTimeout(timer);
         }
     }, [isTyping]);
 
     useEffect(() => {
         if (selectedMaterial) {
-            const steps = getSteps(selectedMaterial);
+            const steps = getSteps(selectedMaterial, userData.name);
             setCurrentSteps(steps);
         }
     }, [selectedMaterial]);
@@ -118,13 +119,23 @@ const Chatbot = () => {
                     <MaterialSelection handleMaterialSelection={handleMaterialSelection} />
                 ) : (
                     <div>
-                        {!isFinished && currentSteps[step] && (
+                        {!isFinished && !isTyping && currentSteps[step] && (
                             <div className="mb-4">
-                                <div className="flex justify-start">
-                                    <div className="bg-purple-200 text-purple-700 rounded-lg p-3 max-w-xs">
-                                        {currentSteps[step].message}
+                                {currentSteps[step].message.map((message, index) => (
+                                    <div key={index} className="flex justify-start">
+                                         <img src={image.bot} className="mr-2" alt="bot" />
+                                        {typeof message === 'string' ? (
+                                            <div className="bg-purple-200 text-purple-700 rounded-lg p-3 max-w-xs mb-2">
+                                                {message}
+                                            </div>
+                                        ) : (
+                                            <div className="bg-purple-200 text-purple-700 rounded-lg p-3 max-w-xs mb-2">
+                                                <img src={message.src} alt={message.alt} className="mb-2 rounded-lg" />
+                                            </div>
+                                        )}
                                     </div>
-                                </div>
+                                ))}
+
                                 <div className="flex flex-col mt-2 ml-4">
                                     {currentSteps[step].options.map((option, index) => (
                                         <button

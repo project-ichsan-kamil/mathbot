@@ -1006,7 +1006,7 @@ export const getSteps = (material, name) => {
         latihan: [
             {
                 message:
-                    ["Latihan 1: Di sebuah perpustakaan, terdapat 30 buku fiksi dan 20 buku non-fiksi. Bagaimana cara menyatakan rasio jumlah buku fiksi terhadap jumlah buku non-fiksi?"],
+                    ["Latihan 1. Di sebuah perpustakaan, terdapat 30 buku fiksi dan 20 buku non-fiksi. Bagaimana cara menyatakan rasio jumlah buku fiksi terhadap jumlah buku non-fiksi?"],
                 options: [
                     {
                         key: "A",
@@ -1044,11 +1044,11 @@ export const getSteps = (material, name) => {
             },
             {
                 message:
-                    ["Latihan 2: Panjang sebuah papan adalah 35 cm dan lebarnya 14 cm. Sederhanakanlah rasio panjang terhadap lebar."],
+                    ["Latihan 2. Panjang sebuah papan adalah 35 cm dan lebarnya 14 cm. Sederhanakanlah rasio panjang terhadap lebar."],
                 options: [
                     {
                         key: "A",
-                        text: "A. 5:2",
+                        text: "A. 7:2",
                         response: "Yah… Jawabanmu kurang tepat :(",
                         nextStep: 2,
                         isFinish: false,
@@ -1072,7 +1072,7 @@ export const getSteps = (material, name) => {
                     },
                     {
                         key: "D",
-                        text: "D. 7:2",
+                        text: "D. 5:2",
                         response: "Yeay… Jawabanmu benar :)",
                         nextStep: 2,
                         isFinish: false,
@@ -1082,7 +1082,7 @@ export const getSteps = (material, name) => {
             },
             {
                 message:
-                    ["Latihan 3: Rasio 20:15 setara dengan rasio mana di bawah ini?"],
+                    ["Latihan 3. Rasio 20:15 setara dengan rasio mana di bawah ini?"],
                 options: [
                     {
                         key: "A",
@@ -1120,7 +1120,7 @@ export const getSteps = (material, name) => {
             },
             {
                 message:
-                   [ "Latihan 4: Seorang petani mencampurkan 12 kg pupuk organik dengan 8 kg pupuk kimia untuk digunakan di ladangnya. Jika petani tersebut ingin membuat campuran pupuk dalam jumlah yang lebih besar tetapi dengan rasio yang sama, berapakah rasio lain yang setara dengan 12 kg pupuk organik dan 8 kg pupuk kimia?"],
+                   [ "Latihan 4. Seorang petani mencampurkan 12 kg pupuk organik dengan 8 kg pupuk kimia untuk digunakan di ladangnya. Jika petani tersebut ingin membuat campuran pupuk dalam jumlah yang lebih besar tetapi dengan rasio yang sama, berapakah rasio lain yang setara dengan 12 kg pupuk organik dan 8 kg pupuk kimia?"],
                 options: [
                     {
                         key: "A",
@@ -1157,7 +1157,7 @@ export const getSteps = (material, name) => {
                 ],
             },
             {
-                message: ["Latihan 5: Jika x : 4 = 8 : 16, berapakah nilai x?"],
+                message: ["Latihan 5. Jika x : 4 = 8 : 16, berapakah nilai x?"],
                 options: [
                     {
                         key: "A",
@@ -1195,11 +1195,11 @@ export const getSteps = (material, name) => {
             },
             {
                 message:
-                    ["Latihan 6: Diketahui persamaan rasio 6 : x = 18 : 9. Hitunglah nilai x."],
+                    ["Latihan 6. Diketahui persamaan rasio 6 : x = 18 : 9. Hitunglah nilai x."],
                 options: [
                     {
                         key: "A",
-                        text: "A. 3",
+                        text: "A. 6",
                         response: "Yah… Jawabanmu kurang tepat :(",
                         nextStep: 6,
                         isFinish: false,
@@ -1215,7 +1215,7 @@ export const getSteps = (material, name) => {
                     },
                     {
                         key: "C",
-                        text: "C. 6",
+                        text: "C. 3",
                         response: "Yeay… Jawabanmu benar :)",
                         nextStep: 6,
                         isFinish: false,
@@ -1233,7 +1233,7 @@ export const getSteps = (material, name) => {
             },
             {
                 message:
-                    ["Latihan 7: Sebuah instruksi mengatakan bahwa rasio bensin terhadap oli dalam campuran bahan bakar untuk mesin tertentu adalah 5:2. Jika kamu menggunakan 25 liter bensin, berapa liter oli yang harus kamu gunakan?"],
+                    ["Latihan 7. Sebuah instruksi mengatakan bahwa rasio bensin terhadap oli dalam campuran bahan bakar untuk mesin tertentu adalah 5:2. Jika kamu menggunakan 25 liter bensin, berapa liter oli yang harus kamu gunakan?"],
                 options: [
                     {
                         key: "A",
@@ -1271,7 +1271,7 @@ export const getSteps = (material, name) => {
             },
             {
                 message:
-                    ["Latihan 8: Misalkan kamu memiliki 9 liter cat merah dan ingin mencampurnya dengan cat putih dalam rasio 3:5. Berapa liter cat putih yang kamu butuhkan?"],
+                    ["Latihan 8. Misalkan kamu memiliki 9 liter cat merah dan ingin mencampurnya dengan cat putih dalam rasio 3:5. Berapa liter cat putih yang kamu butuhkan?"],
                 options: [
                     {
                         key: "A",
@@ -1309,7 +1309,7 @@ export const getSteps = (material, name) => {
             },
             {
                 message:
-                    ["Latihan 9: Dalam sebuah survei di sekolah, 120 dari 200 siswa mengatakan bahwa mereka lebih suka belajar online daripada tatap muka. Berapakah rasio siswa yang lebih suka belajar online terhadap siswa yang lebih suka belajar tatap muka?"],
+                    ["Latihan 9. Dalam sebuah survei di sekolah, 120 dari 200 siswa mengatakan bahwa mereka lebih suka belajar online daripada tatap muka. Berapakah rasio siswa yang lebih suka belajar online terhadap siswa yang lebih suka belajar tatap muka?"],
                 options: [
                     {
                         key: "A",
@@ -1347,7 +1347,7 @@ export const getSteps = (material, name) => {
             },
             {
                 message:
-                    ["Latihan 10: Dari 500 orang yang disurvei, 150 mengatakan bahwa mereka membaca buku setiap hari. Berapakah rasio antara jumlah orang yang membaca buku setiap hari terhadap mereka yang tidak membaca setiap hari?"],
+                    ["Latihan 10. Dari 500 orang yang disurvei, 150 mengatakan bahwa mereka membaca buku setiap hari. Berapakah rasio antara jumlah orang yang membaca buku setiap hari terhadap mereka yang tidak membaca setiap hari?"],
                 options: [
                     {
                         key: "A",

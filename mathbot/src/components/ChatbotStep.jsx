@@ -224,7 +224,7 @@ export const getSteps = (material, name) => {
                 ],
                 options: [
                     {
-                        text: "Rasio adalah perbandingan antara dua jumlah..",
+                        text: "Rasio adalah perbandingan antara dua jumlah.",
                         response:
                             "Tepat sekali! Rasio adalah cara untuk membandingkan dua jumlah atau lebih.",
                         nextStep: 1,

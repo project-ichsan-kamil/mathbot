@@ -8,9 +8,7 @@ export const getSteps = (material, name) => {
                     `Hai ${name}!`,
                     "Hari ini kita akan berbicara tentang sesuatu yang sering kita lakukan tanpa kita sadari. Pernahkah kamu membagi sesuatu dengan temanmu?",
                     "Misalnya, membagi kue atau permen. Bagaimana kamu biasanya membaginya?",
-                    { src: image.mathbot_1_1, alt: "mathbot_1_1" },
                 ],
-                image: image.mathbot_1_1,
                 options: [
                     {
                         text: "Ya, biasanya saya membaginya sama rata.",
@@ -31,12 +29,13 @@ export const getSteps = (material, name) => {
             },
             {
                 message: [
-                    "Sekarang, bagaimana kalau kamu punya 4 kue, dan temanmu hanya punya 2 kue? Menurutmu, apakah pembagian ini adil?",
+                    "Sekarang, misalkan kamu punya 6 kue dan ingin membaginya sama rata dengan temanmu. Namun, pada akhirnya kamu punya 4 kue dan temanmu hanya 2 kue. Menurutmu, apakah pembagian ini adil?",
+                    { src: image.mathbot_1_1, alt: "mathbot_1_1" },
                 ],
                 options: [
                     {
                         text: "Tidak, itu tidak adil.",
-                        response: "Kamu benar, jumlahnya tidak sama.",
+                        response: "Kamu benar, banyaknya kuemu dan kue temanmu tidak sama.",
                         nextStep: 2,
                     },
                     {
@@ -55,32 +54,32 @@ export const getSteps = (material, name) => {
             {
                 message: [
                     "Bagus, mari kita lihat lagi.",
-                    "Jika kita membandingkan jumlah kue yang kamu miliki dengan jumlah kue temanmu, apa yang bisa kamu katakan tentang perbandingan ini?",
+                    "Jika kita membandingkan banyaknya kue yang kamu miliki, yaitu 4 kue, dengan banyaknya kue temanmu yang hanya 2 kue, apa yang bisa kamu katakan tentang perbandingan ini?",
                 ],
                 options: [
                     {
-                        text: "Jumlah kue saya dua kali lebih banyak.",
+                        text: "Kue saya dua kali lebih banyak.",
                         response:
-                            "Benar, jumlah kue kamu dua kali lebih banyak daripada kue temanmu.",
+                            "Benar, kue kamu dua kali lebih banyak daripada kue temanmu.",
                         nextStep: 3,
                     },
                     {
-                        text: "Jumlah kue saya sama dengan jumlah kue teman saya.",
+                        text: "Banyaknya kue saya sama dengan banyaknya kue teman saya.",
                         response:
                             "Tidak tepat. Sebenarnya, kamu punya lebih banyak kue, tepatnya dua kali lebih banyak daripada kue temanmu.",
                         nextStep: 3,
                     },
                     {
-                        text: "Jumlah kue saya lebih sedikit daripada jumlah kue teman saya.",
+                        text: "Kue saya lebih sedikit daripada kue teman saya.",
                         response:
-                            "Tidak, jumlah kue kamu lebih banyak daripada kue temanmu, bukan lebih sedikit. Coba periksa kembali jumlah masing-masing.",
+                            "Tidak, kue kamu lebih banyak daripada kue temanmu, bukan lebih sedikit. Coba periksa kembali.",
                         nextStep: 3,
                     },
                 ],
             },
             {
                 message: [
-                    "Sekarang, bagaimana kalau kita mengatakan bahwa jumlah kue kamu dibandingkan dengan jumlah kue temanmu adalah 4:2? Apa artinya menurutmu?",
+                    "Sekarang, bagaimana kalau kita mengatakan bahwa banyaknya kue kamu dibandingkan dengan banyaknya kue temanmu adalah 4:2? Apa artinya menurutmu?",
                 ],
                 options: [
                     {
@@ -104,18 +103,34 @@ export const getSteps = (material, name) => {
                 ],
             },
             {
-                message: [
-                    "Mari kita tarik kesimpulan.",
-                    "Rasio adalah cara untuk membandingkan dua jumlah atau lebih.",
-                    "Dalam kasus ini, rasio 4:2 menunjukkan bahwa jumlah kue kamu dibandingkan dengan jumlah kue temanmu adalah 4 banding 2. ",
-                    "Rasio juga bisa disederhanakan seperti yang kita lakukan dengan 4:2 menjadi 2:1."
+                message:[
+                    "Ketika kita mengatakan bahwa banyaknya kue kamu dibandingkan dengan banyaknya kue temanmu adalah 4:2, ini disebut sebagai rasio.", 
+                    "Jadi, menurutmu, apa itu rasio?"],
+                options: [
+                    {
+                        text: "Rasio adalah cara untuk membandingkan dua nilai atau lebih.",
+                        response:
+                            "Tepat sekali! Rasio adalah cara untuk membandingkan dua nilai atau lebih.",
+                        nextStep: 5,
+                    },
+                    {
+                        text: "Rasio adalah pembagian yang selalu sama rata.",
+                        response:
+                            "Tidak, rasio tidak selalu berarti pembagian yang sama rata. Rasio adalah cara untuk membandingkan dua nilai atau lebih.",
+                        nextStep: 5,
+                    },
+                    {
+                        text: "Rasio adalah nilai yang lebih besar dibandingkan dengan nilai yang lebih kecil.",
+                        response:
+                            "Tidak, rasio tidak selalu berarti nilai yang lebih besar dibandingkan nilai yang lebih kecil. Rasio adalah cara untuk membandingkan dua nilai atau lebih.",
+                        nextStep: 5,
+                    },
                 ],
-                options: [{ text: "Lanjut", response: "Lanjut", nextStep: 5 }],
             },
             {
                 message:[
                     "Sekarang kita coba satu contoh soal.", 
-                    "Misalkan kamu memiliki 15 botol air dan temanmu memiliki 7 botol air. Bagaimana kamu bisa menuliskan rasio jumlah botol air kamu dengan botol air temanmu?"],
+                    "Misalkan kamu memiliki 15 botol air dan temanmu memiliki 7 botol air. Bagaimana kamu bisa menuliskan rasio banyaknya botol airmu dengan botol air temanmu?"],
                 options: [
                     {
                         text: "Rasionya adalah 15:7.",
@@ -140,7 +155,7 @@ export const getSteps = (material, name) => {
             {
                 message:[
                     "Sekarang saatnya kamu berlatih sendiri.", 
-                    "Di sebuah taman, terdapat 18 bangku kayu dan 12 bangku besi. Bagaimana bentuk paling sederhana dari rasio jumlah bangku kayu dengan bangku besi di taman tersebut?"],
+                    "Di sebuah taman, terdapat 18 bangku kayu dan 12 bangku besi. Bagaimana bentuk paling sederhana dari rasio banyaknya bangku kayu dengan bangku besi di taman tersebut?"],
                 options: [
                     {
                         text: "18:12",
@@ -157,28 +172,28 @@ export const getSteps = (material, name) => {
                     {
                         text: "2:3",
                         response:
-                            "Tidak tepat, rasio yang benar seharusnya 3:2, bukan 2:3. Pastikan urutan jumlah bangku sesuai dengan yang ada di taman.",
+                            "Tidak tepat, rasio yang benar seharusnya 3:2, bukan 2:3. Pastikan urutan banyaknya bangku sesuai dengan yang ada di taman.",
                         nextStep: 7,
                     },
                     {
                         text: "12:18",
                         response:
-                            "Rasio ini terbalik. Jumlah bangku kayu lebih banyak, jadi rasionya harus mencerminkan bahwa ada 18 bangku kayu dan 12 bangku besi, bukan sebaliknya.",
+                            "Rasio ini terbalik. Bangku kayu lebih banyak, di rasionya harus mencerminkan bahwa ada 18 bangku kayu dan 12 bangku besi, bukan sebaliknya.",
                         nextStep: 7,
                     },
                 ],
             },
             {
                 message:[
-                    "Perhatikan Gambar dibawah ini!",
+                    "Perhatikan Gambar berikut!",
                     { src: image.mathbot_1_2, alt: "mathbot_1_2" },
-                    "Bagaimana kamu menuliskan rasio jumlah gelas berisi susu dengan jumlah gelas berisi coklat?"],
+                    "Bagaimana kamu menuliskan rasio banyaknya gelas berisi susu dengan banyaknya gelas berisi coklat?"],
                 image: image.mathbot_1_2,
                 options: [
                     {
                         text: "4:6",
                         response:
-                            "Tepat sekali! Rasio jumlah gelas berisi susu dengan jumlah gelas berisi coklat adalah 4:6. Tetapi, coba pikirkan lagi. Apakah rasio ini masih bisa disederhanakan?",
+                            "Tepat sekali! Rasio banyaknya gelas berisi susu dengan banyaknya gelas berisi coklat adalah 4:6. Tetapi, coba pikirkan lagi. Apakah rasio ini masih bisa disederhanakan?",
                         nextStep: 8,
                     },
                     {
@@ -190,13 +205,13 @@ export const getSteps = (material, name) => {
                     {
                         text: "2:3",
                         response:
-                            "Bagus! 2:3 adalah penyederhanaan dari rasio 4:6. Ini adalah cara lain untuk menuliskan perbandingan jumlah gelas susu dengan coklat.",
+                            "Bagus! 2:3 adalah penyederhanaan dari rasio 4:6. Ini adalah cara lain untuk menuliskan perbandingan banyaknya gelas susu dengan coklat.",
                         nextStep: 8,
                     },
                     {
                         text: "3:2",
                         response:
-                            "Coba lagi! Rasio 3:2 tidak menggambarkan perbandingan jumlah gelas susu dan coklat yang kamu miliki. Pastikan kamu menghitung rasionya dengan benar.",
+                            "Coba lagi! Rasio 3:2 tidak menggambarkan perbandingan banyaknya gelas susu dan coklat yang kamu miliki. Pastikan kamu menghitung rasionya dengan benar.",
                         nextStep: 8,
                     },
                 ],
@@ -204,7 +219,7 @@ export const getSteps = (material, name) => {
             {
                 message:[
                     "Baiklah, kamu sudah bekerja dengan sangat baik pada materi ini ini!",
-                    "Sekarang kamu tahu bahwa rasio adalah cara untuk membandingkan dua jumlah atau lebih, dan kamu juga tahu bagaimana cara untuk menyederhanakan rasio."
+                    "Sekarang kamu tahu bahwa rasio adalah cara untuk membandingkan dua nilai atau lebih, dan kamu juga tahu bagaimana cara untuk menyederhanakan rasio."
                 ],
                 options: [{ text: "Lanjut", response: "Lanjut", nextStep: 9 }],
             },
@@ -224,30 +239,30 @@ export const getSteps = (material, name) => {
                 ],
                 options: [
                     {
-                        text: "Rasio adalah perbandingan antara dua jumlah.",
+                        text: "Rasio adalah perbandingan antara dua nilai atau lebih",
                         response:
-                            "Tepat sekali! Rasio adalah cara untuk membandingkan dua jumlah atau lebih.",
+                            "Tepat sekali! Rasio adalah cara untuk membandingkan dua nilai atau lebih.",
                         nextStep: 1,
                         isFinish: false,
                     },
                     {
-                        text: "Rasio adalah pembagian antara dua angka.",
+                        text: "Rasio adalah pembagian antara dua nilai.",
                         response:
-                            "Hampir tepat, tapi rasio tidak sama dengan pembagian. Mari kita ingat bersama, rasio adalah perbandingan antara dua jumlah atau lebih.",
+                            "Hampir tepat, tapi rasio tidak sama dengan pembagian. Mari kita ingat bersama, rasio adalah perbandingan antara dua nilai atau lebih.",
                         nextStep: 1,
                         isFinish: false,
                     },
                     {
-                        text: "Rasio adalah jumlah total dari dua angka.",
+                        text: "Rasio adalah jumlah total dari dua nilai.",
                         response:
-                            "Tidak tepat, rasio tidak berarti jumlah total dari dua angka. Mari kita ingat lagi, rasio adalah perbandingan antara dua jumlah atau lebih.",
+                            "Tidak tepat, rasio tidak berarti jumlah total dari dua nilai. Mari kita ingat lagi, rasio adalah perbandingan antara dua nilai atau lebih.",
                         nextStep: 1,
                         isFinish: false,
                     },
                     {
                         text: "Saya tidak ingat.",
                         response:
-                            "Tidak masalah, mari kita ingat bersama. Rasio adalah perbandingan antara dua jumlah atau lebih.",
+                            "Tidak masalah, mari kita ingat bersama. Rasio adalah perbandingan antara dua nilai atau lebih.",
                         nextStep: 1,
                         isFinish: false,
                     },
@@ -347,7 +362,7 @@ export const getSteps = (material, name) => {
             },
             {
                 message:[
-                    "Sekarang, bagaimana jika kita punya dua rasio: 18:12 dan 3:2. Menurutmu, apakah kedua rasio ini sama atau berbeda?",
+                    "Sekarang, bagaimana jika kita punya dua rasio, yaitu 18:12 dan 3:2. Menurutmu, apakah kedua rasio ini sama atau berbeda?",
                 ],
                 options: [
                     {
@@ -375,7 +390,7 @@ export const getSteps = (material, name) => {
                     {
                         text: "Rasionya sama, yaitu 3:2.",
                         response:
-                            "Bagus! Di kedua kelas, kita bisa menyederhanakan rasionya menjadi 3:2. Walaupun jumlah siswa berbeda, rasio antara laki-laki dan perempuan di kedua kelas ini tetap sama.",
+                            "Bagus! Di kedua kelas, kita bisa menyederhanakan rasionya menjadi 3:2. Walaupun banyaknya siswa di kedua kelas berbeda, rasio antara laki-laki dan perempuan di kedua kelas ini tetap sama.",
                         nextStep: 7,
                         isFinish: false,
                     },
@@ -415,7 +430,7 @@ export const getSteps = (material, name) => {
             {
                 message:[
                     "Mari kita coba satu soal lagi.", 
-                    "Di Taman A, ada 50 pohon mangga dan 25 pohon jambu. Di Taman B, ada 60 pohon mangga dan 40 pohon jambu. Apakah rasio jumlah pohon mangga terhadap pohon jambu di kedua taman ini sama?",
+                    "Di Taman A, ada 50 pohon mangga dan 25 pohon jambu. Di Taman B, ada 60 pohon mangga dan 40 pohon jambu. Apakah rasio banyaknya pohon mangga terhadap pohon jambu di kedua taman ini sama?",
                     { src: image.mathbot_2_2, alt: "mathbot_2_2" },
                 ],
                 image: image.mathbot_2_2,
@@ -423,14 +438,14 @@ export const getSteps = (material, name) => {
                     {
                         text: "Ya, rasionya sama.",
                         response:
-                            "Tidak tepat. Mari kita hitung bersama. Rasio 50:25 di Taman A bisa disederhanakan menjadi 2:1, sedangkan rasio 60:40 di Taman B bisa disederhanakan menjadi 3:2. Karena 2:1 dan 3:2 berbeda, maka rasio jumlah pohon mangga terhadap pohon jambu di kedua taman ini tidak sama.",
+                            "Tidak tepat. Mari kita hitung bersama. Rasio 50:25 di Taman A bisa disederhanakan menjadi 2:1, sedangkan rasio 60:40 di Taman B bisa disederhanakan menjadi 3:2. Karena 2:1 dan 3:2 berbeda, maka rasio banyaknya pohon mangga terhadap pohon jambu di kedua taman ini tidak sama.",
                         nextStep: 9,
                         isFinish: false,
                     },
                     {
                         text: "Tidak, rasionya berbeda.",
                         response:
-                            "Tepat sekali! Rasio 50:25 di Taman A bisa disederhanakan menjadi 2:1, sedangkan rasio 60:40 di Taman B bisa disederhanakan menjadi 3:2. Karena 2:1 dan 3:2 berbeda, maka rasio jumlah pohon mangga terhadap pohon jambu di kedua taman ini tidak sama.",
+                            "Tepat sekali! Rasio 50:25 di Taman A bisa disederhanakan menjadi 2:1, sedangkan rasio 60:40 di Taman B bisa disederhanakan menjadi 3:2. Karena 2:1 dan 3:2 berbeda, maka rasio banyaknya pohon mangga terhadap pohon jambu di kedua taman ini tidak sama.",
                         nextStep: 9,
                         isFinish: false,
                     },
@@ -440,10 +455,30 @@ export const getSteps = (material, name) => {
                 message:[
                     "Jadi, dapat ditarik kesimpulan bahwa ketika dua rasio memiliki nilai yang sama, kita menyebutnya sebagai perbandingan atau proporsi. Proporsi menunjukkan bahwa perbandingan antara dua rasio adalah setara, meskipun angkanya berbeda",
                     "Dalam bentuk matematika, kita menuliskannya sebagai a : b = c : d, yang berarti rasio a terhadap b sama dengan rasio c terhadap d.",
-                    { src: image.mathbot_2_3, alt: "mathbot_2_3" },
-
                 ],
-                options: [{ text: "Lanjut", response: "Lanjut", nextStep: 10 }],
+                options: [
+                    {
+                        text: { src: image.opsi_1, alt: "opsi_1" },
+                        response:
+                            "Tidak tepat.",
+                        nextStep: 10,
+                        isFinish: false,
+                    },
+                    {
+                        text: { src: image.opsi_2, alt: "opsi_2" },
+                        response:
+                            "Benar!",
+                        nextStep: 10,
+                        isFinish: false,
+                    },
+                    {
+                        text: { src: image.opsi_3, alt: "opsi_3" },
+                        response:
+                            "Tidak tepat.",
+                        nextStep: 10,
+                        isFinish: false,
+                    },
+                ],
             },
             {
                 message:[
@@ -483,7 +518,7 @@ export const getSteps = (material, name) => {
             {
                 message:[
                     "Mari kita coba soal berikut ini.", 
-                    "Misalkan ada 7.5 liter jus jeruk dan 5 liter jus apel. Bagaimana kamu menuliskan rasio jumlah jus jeruk dengan jus apel?",
+                    "Misalkan ada 7.5 liter jus jeruk dan 5 liter jus apel. Bagaimana kamu menuliskan rasio banyaknya jus jeruk dengan jus apel?",
                 ],
                 options: [
                     {
@@ -546,7 +581,7 @@ export const getSteps = (material, name) => {
                     {
                         text: "Ini berarti rasio jus jeruk dan jus apel sama.",
                         response:
-                            "Tidak benar. Rasio 3:2 menunjukkan perbandingan, bukan kesamaan jumlah jus jeruk dan jus apel.",
+                            "Tidak benar. Rasio 3:2 menunjukkan perbandingan, bukan kesamaan banyak jus jeruk dan jus apel.",
                         nextStep: 13,
                         isFinish: false,
                     },
@@ -555,7 +590,7 @@ export const getSteps = (material, name) => {
              {
                 message:[
                     "Kamu telah membuat kemajuan besar hari ini!",
-                    "Sekarang kamu tahu bagaimana menyederhanakan rasio dan membandingkan rasio yang berbeda. Ini akan sangat membantu kamu dalam menyelesaikan soal-soal perbandingan di masa depan.",
+                    "Sekarang kamu tidak hanya tahu cara menyederhanakan rasio, tetapi juga memahami apa itu perbandingan dan proporsi. Ini akan sangat membantu kamu dalam menyelesaikan soal-soal perbandingan di masa depan.",
                     "Sampai bertemu di pertemuan berikutnya!"
                 ],
                 options: [],
@@ -644,9 +679,9 @@ export const getSteps = (material, name) => {
                         isFinish: false
                     },
                     {
-                        text: "Artinya, jumlah tepung tapioka dan ikan giling sama.",
+                        text: "Artinya, banyaknya tepung tapioka dan ikan giling sama.",
                         response:
-                            "Salah, rasio ini tidak menunjukkan jumlah yang sama.",
+                            "Salah, rasio ini tidak menunjukkan nilai yang sama.",
                         nextStep: 3,
                         isFinish: false
                     },
@@ -803,7 +838,7 @@ export const getSteps = (material, name) => {
                     {
                         text: "9 bagian air.",
                         response:
-                            "Tidak, 9 bagian air tidak cukup. Ingat bahwa jumlah air harus lebih banyak dari jus.",
+                            "Tidak, 9 bagian air tidak cukup. Ingat bahwa air harus lebih banyak dari jus.",
                         nextStep: 7,
                         isFinish: false
                     },
@@ -1006,7 +1041,7 @@ export const getSteps = (material, name) => {
         latihan: [
             {
                 message:
-                    ["Latihan 1. Di sebuah perpustakaan, terdapat 30 buku fiksi dan 20 buku non-fiksi. Bagaimana cara menyatakan rasio jumlah buku fiksi terhadap jumlah buku non-fiksi?"],
+                    ["Latihan 1. Di sebuah perpustakaan, terdapat 30 buku fiksi dan 20 buku non-fiksi. Bagaimana cara menyatakan rasio banyaknya buku fiksi terhadap banyaknya buku non-fiksi?"],
                 options: [
                     {
                         key: "A",
@@ -1124,7 +1159,7 @@ export const getSteps = (material, name) => {
                 options: [
                     {
                         key: "A",
-                        text: "A. 6 kg pupuk organik dan 4 kg pupuk kimia",
+                        text: "A. 6 kg pupuk organik dan 8 kg pupuk kimia",
                         response: "Yah… Jawabanmu kurang tepat :(",
                         nextStep: 4,
                         isFinish: false,
@@ -1133,22 +1168,22 @@ export const getSteps = (material, name) => {
                     {
                         key: "B",
                         text: "B. 9 kg pupuk organik dan 6 kg pupuk kimia",
-                        response: "Yah… Jawabanmu kurang tepat :(",
-                        nextStep: 4,
-                        isFinish: false,
-                        isCorrect: false,
-                    },
-                    {
-                        key: "C",
-                        text: "C. 18 kg pupuk organik dan 12 kg pupuk kimia",
                         response: "Yeay… Jawabanmu benar :)",
                         nextStep: 4,
                         isFinish: false,
                         isCorrect: true,
                     },
                     {
+                        key: "C",
+                        text: "C. 10 kg pupuk organik dan 7 kg pupuk kimia",
+                        response: "Yah… Jawabanmu kurang tepat :(",
+                        nextStep: 4,
+                        isFinish: false,
+                        isCorrect: false,
+                    },
+                    {
                         key: "D",
-                        text: "D. 15 kg pupuk organik dan 10 kg pupuk kimia",
+                        text: "D. 14 kg pupuk organik dan 8 kg pupuk kimia",
                         response: "Yah… Jawabanmu kurang tepat :(",
                         nextStep: 4,
                         isFinish: false,
@@ -1314,18 +1349,18 @@ export const getSteps = (material, name) => {
                     {
                         key: "A",
                         text: "A. 3:2",
-                        response: "Yeay… Jawabanmu benar :)",
-                        nextStep: 9,
-                        isFinish: false,
-                        isCorrect: true,
-                    },
-                    {
-                        key: "B",
-                        text: "B. 3:5",
                         response: "Yah… Jawabanmu kurang tepat :(",
                         nextStep: 9,
                         isFinish: false,
                         isCorrect: false,
+                    },
+                    {
+                        key: "B",
+                        text: "B. 3:5",
+                        response: "Yeay… Jawabanmu benar :)",
+                        nextStep: 9,
+                        isFinish: false,
+                        isCorrect: true,
                     },
                     {
                         key: "C",
@@ -1347,7 +1382,7 @@ export const getSteps = (material, name) => {
             },
             {
                 message:
-                    ["Latihan 10. Dari 500 orang yang disurvei, 150 mengatakan bahwa mereka membaca buku setiap hari. Berapakah rasio antara jumlah orang yang membaca buku setiap hari terhadap mereka yang tidak membaca setiap hari?"],
+                    ["Latihan 10. Dari 500 orang yang disurvei, 150 mengatakan bahwa mereka membaca buku setiap hari. Berapakah rasio antara banyaknya orang yang membaca buku setiap hari terhadap mereka yang tidak membaca setiap hari?"],
                 options: [
                     {
                         key: "A",

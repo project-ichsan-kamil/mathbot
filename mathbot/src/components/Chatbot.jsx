@@ -143,7 +143,9 @@ const Chatbot = () => {
                                             onClick={() => handleOptionClick(option)}
                                             className="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg mt-2 text-left"
                                         >
-                                            {option.text}
+                                            {typeof option.text === 'string' ? (option.text) : (
+                                                <img src={option.text.src} alt={option.text.alt} className="h-6 w-6 mr-2" style={{width: '100px', height: '40px'}} />
+                                            )}
                                         </button>
                                     ))}
                                 </div>

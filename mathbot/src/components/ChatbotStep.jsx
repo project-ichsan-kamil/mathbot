@@ -270,7 +270,8 @@ export const getSteps = (material, name) => {
             },
             {
                 message:[
-                    "Masih ingatkah pada materi sebelumnya kita juga telah belajar tentang bagaimana menyederhanakan rasio?", "Hari ini, kita akan membahasnya lebih dalam lagi agar kamu lebih paham dan bisa menggunakannya dengan lebih baik."
+                    "Masih ingatkah pada materi sebelumnya kita juga telah belajar tentang menyederhanakan rasio?", 
+                    "Hari ini, kita akan membahasnya lebih lanjut agar kamu bisa menyelesaikan masalah yang berkaitan dengan rasio dengan lebih baik"
                 ],
                 options: [
                     {
@@ -453,8 +454,9 @@ export const getSteps = (material, name) => {
             },
             {
                 message:[
-                    "Jadi, dapat ditarik kesimpulan bahwa ketika dua rasio memiliki nilai yang sama, kita menyebutnya sebagai perbandingan atau proporsi. Proporsi menunjukkan bahwa perbandingan antara dua rasio adalah setara, meskipun angkanya berbeda",
+                    "Jadi, dapat ditarik kesimpulan bahwa ketika dua rasio memiliki nilai yang sama, kita menyebutnya sebagai perbandingan atau proporsi.",
                     "Dalam bentuk matematika, kita menuliskannya sebagai a : b = c : d, yang berarti rasio a terhadap b sama dengan rasio c terhadap d.",
+                    "Bisakah kamu menentukan bentuk lain dari persamaan ini?"
                 ],
                 options: [
                     {

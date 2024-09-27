@@ -462,21 +462,21 @@ export const getSteps = (material, name) => {
                     {
                         text: { src: image.opsi_1, alt: "opsi_1" },
                         response:
-                            "Tidak tepat.",
+                            "Tidak tepat. Ingat bahwa rasio a : b sama dengan rasio c : d, seharusnya dituliskan sebagai a/b = c/d.",
                         nextStep: 10,
                         isFinish: false,
                     },
                     {
                         text: { src: image.opsi_2, alt: "opsi_2" },
                         response:
-                            "Benar!",
+                            "Benar! Bentuk lain dari persamaan a : b = c : d adalah a/b = c/d.",
                         nextStep: 10,
                         isFinish: false,
                     },
                     {
                         text: { src: image.opsi_3, alt: "opsi_3" },
                         response:
-                            "Tidak tepat.",
+                            "Tidak tepat. Ingat bahwa rasio a : b sama dengan rasio c : d, seharusnya dituliskan sebagai a/b = c/d.",
                         nextStep: 10,
                         isFinish: false,
                     },

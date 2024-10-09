@@ -218,7 +218,7 @@ export const getSteps = (material, name) => {
             },
             {
                 message:[
-                    "Baiklah, kamu sudah bekerja dengan sangat baik pada materi ini ini!",
+                    "Baiklah, kamu sudah bekerja dengan sangat baik pada materi ini!",
                     "Sekarang kamu tahu bahwa rasio adalah cara untuk membandingkan dua nilai atau lebih, dan kamu juga tahu bagaimana cara untuk menyederhanakan rasio."
                 ],
                 options: [{ text: "Lanjut", response: "Lanjut", nextStep: 9 }],

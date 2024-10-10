@@ -119,7 +119,7 @@ const Chatbot = () => {
                     <MaterialSelection handleMaterialSelection={handleMaterialSelection} />
                 ) : (
                     <div>
-                        {!isFinished && !isTyping && currentSteps[step] && (
+                        {!isTyping && currentSteps[step] && (
                             <div className="mb-4">
                                 {currentSteps[step].message.map((message, index) => (
                                     <div key={index} className="flex justify-start">
@@ -136,19 +136,28 @@ const Chatbot = () => {
                                     </div>
                                 ))}
 
-                                <div className="flex flex-col mt-2 ml-4">
+                                {!isFinished && (
+                                    <div className="flex flex-col mt-2 ml-4">
                                     {currentSteps[step].options.map((option, index) => (
                                         <button
-                                            key={index}
-                                            onClick={() => handleOptionClick(option)}
-                                            className="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg mt-2 text-left"
+                                        key={index}
+                                        onClick={() => handleOptionClick(option)}
+                                        className="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg mt-2 text-left"
                                         >
-                                            {typeof option.text === 'string' ? (option.text) : (
-                                                <img src={option.text.src} alt={option.text.alt} className="h-6 w-6 mr-2" style={{width: '100px', height: '40px'}} />
-                                            )}
+                                        {typeof option.text === 'string' ? (
+                                            option.text
+                                        ) : (
+                                            <img
+                                            src={option.text.src}
+                                            alt={option.text.alt}
+                                            className="h-6 w-6 mr-2"
+                                            style={{ width: '100px', height: '40px' }}
+                                            />
+                                        )}
                                         </button>
                                     ))}
-                                </div>
+                                    </div>
+                                )}
                             </div>
                         )}
                     </div>

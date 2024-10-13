@@ -58,9 +58,9 @@ export const getSteps = (material, name) => {
                 ],
                 options: [
                     {
-                        text: "Kue saya dua kali lebih banyak.",
+                        text: "Kue saya lebih sedikit daripada kue teman saya.",
                         response:
-                            "Benar, kue kamu dua kali lebih banyak daripada kue temanmu.",
+                            "Tidak, kue kamu lebih banyak daripada kue temanmu, bukan lebih sedikit. Coba periksa kembali.",
                         nextStep: 3,
                     },
                     {
@@ -69,10 +69,11 @@ export const getSteps = (material, name) => {
                             "Tidak tepat. Sebenarnya, kamu punya lebih banyak kue, tepatnya dua kali lebih banyak daripada kue temanmu.",
                         nextStep: 3,
                     },
+                    
                     {
-                        text: "Kue saya lebih sedikit daripada kue teman saya.",
+                        text: "Kue saya dua kali lebih banyak.",
                         response:
-                            "Tidak, kue kamu lebih banyak daripada kue temanmu, bukan lebih sedikit. Coba periksa kembali.",
+                            "Benar, kue kamu dua kali lebih banyak daripada kue temanmu.",
                         nextStep: 3,
                     },
                 ],
@@ -83,15 +84,15 @@ export const getSteps = (material, name) => {
                 ],
                 options: [
                     {
-                        text: "Itu berarti saya punya 4 kue dan teman saya punya 2.",
-                        response:
-                            "Benar! 4:2 berarti kamu punya 4 kue dan temanmu punya 2 kue.",
-                        nextStep: 4,
-                    },
-                    {
                         text: "Itu berarti saya punya 2 kue dan teman saya punya 4 kue.",
                         response:
                             "Tidak, 4:2 berarti kamu punya lebih banyak kue daripada temanmu, bukan sebaliknya.",
+                        nextStep: 4,
+                    },
+                    {
+                        text: "Itu berarti saya punya 4 kue dan teman saya punya 2.",
+                        response:
+                            "Benar! 4:2 berarti kamu punya 4 kue dan temanmu punya 2 kue.",
                         nextStep: 4,
                     },
                     {
@@ -108,15 +109,15 @@ export const getSteps = (material, name) => {
                     "Jadi, menurutmu, apa itu rasio?"],
                 options: [
                     {
-                        text: "Rasio adalah cara untuk membandingkan dua nilai atau lebih.",
-                        response:
-                            "Tepat sekali! Rasio adalah cara untuk membandingkan dua nilai atau lebih.",
-                        nextStep: 5,
-                    },
-                    {
                         text: "Rasio adalah pembagian yang selalu sama rata.",
                         response:
                             "Tidak, rasio tidak selalu berarti pembagian yang sama rata. Rasio adalah cara untuk membandingkan dua nilai atau lebih.",
+                        nextStep: 5,
+                    },
+                    {
+                        text: "Rasio adalah cara untuk membandingkan dua nilai atau lebih.",
+                        response:
+                            "Tepat sekali! Rasio adalah cara untuk membandingkan dua nilai atau lebih.",
                         nextStep: 5,
                     },
                     {
@@ -139,9 +140,9 @@ export const getSteps = (material, name) => {
                         nextStep: 6,
                     },
                     {
-                        text: "Rasionya adalah 5:3.",
+                        text: "Rasionya adalah 7:15.",
                         response:
-                            "Tidak tepat. Rasio 15:7 tidak bisa disederhanakan menjadi 5:3, karena kedua angka tersebut tidak memiliki faktor pembagi yang sama.",
+                            "Tidak tepat. Rasio yang benar adalah 15:7, yang menunjukkan bahwa kamu memiliki 15 botol air dan temanmu memiliki 7 botol air. Urutan ini penting, karena angka pertama menunjukkan jumlah botol kamu dan angka kedua menunjukkan jumlah botol temanmu.",
                         nextStep: 6,
                     },
                     {
@@ -288,16 +289,16 @@ export const getSteps = (material, name) => {
                 ],
                 options: [
                     {
-                        text: "Membagi keduanya dengan 2.",
+                        text: "Menambah angka pada keduanya.",
                         response:
-                            "Betul sekali! Jika kita membagi 6 dan 4 dengan 2, kita mendapatkan 3:2. Jadi, rasio 6:4 bisa disederhanakan menjadi 3:2.",
+                            "Bukan, menambah angka justru akan mengubah perbandingan. Coba pikirkan apakah kita bisa membagi kedua angka dengan angka yang sama.",
                         nextStep: 3,
                         isFinish: false,
                     },
                     {
-                        text: "Menambah angka pada keduanya.",
+                        text: "Membagi keduanya dengan 2.",
                         response:
-                            "Bukan, menambah angka justru akan mengubah perbandingan. Coba pikirkan apakah kita bisa membagi kedua angka dengan angka yang sama.",
+                            "Betul sekali! Jika kita membagi 6 dan 4 dengan 2, kita mendapatkan 3:2. Jadi, rasio 6:4 bisa disederhanakan menjadi 3:2.",
                         nextStep: 3,
                         isFinish: false,
                     },
@@ -310,9 +311,9 @@ export const getSteps = (material, name) => {
                 ],
                 options: [
                     {
-                        text: "12:8.",
+                        text: "4:2.",
                         response:
-                            "Hampir benar! Rasio 12:8 bisa disederhanakan lebih lanjut. Coba bagi kedua angka dengan angka yang sama untuk menemukan bentuk paling sederhananya.",
+                            "Kurang tepat. Bentuk sederhana dari rasio 12:8 itu bukan 4:2, tapi 3:2. Caranya, bagi kedua angka dengan 4 untuk mendapatkan bentuk yang paling sederhana.",
                         nextStep: 4,
                         isFinish: false,
                     },
@@ -667,16 +668,16 @@ export const getSteps = (material, name) => {
                 ],
                 options: [
                     {
-                        text: "Artinya, untuk setiap 10 bagian tepung tapioka, ada 3 bagian ikan giling.",
+                        text: "Artinya, untuk setiap 3 bagian tepung tapioka, ada 10 bagian ikan giling.",
                         response:
-                            "Tepat sekali! Rasio 10:3 berarti bahwa untuk setiap 10 bagian tepung tapioka, ada 3 bagian ikan giling.",
+                            "Tidak tepat. Rasio 10:3 berarti tepung tapioka lebih banyak daripada ikan giling, bukan sebaliknya",
                         nextStep: 3,
                         isFinish: false
                     },
                     {
-                        text: "Artinya, untuk setiap 3 bagian tepung tapioka, ada 10 bagian ikan giling.",
+                        text: "Artinya, untuk setiap 10 bagian tepung tapioka, ada 3 bagian ikan giling.",
                         response:
-                            "Tidak tepat. Rasio 10:3 berarti tepung tapioka lebih banyak daripada ikan giling, bukan sebaliknya",
+                            "Tepat sekali! Rasio 10:3 berarti bahwa untuk setiap 10 bagian tepung tapioka, ada 3 bagian ikan giling.",
                         nextStep: 3,
                         isFinish: false
                     },
@@ -862,9 +863,9 @@ export const getSteps = (material, name) => {
                 image: image.mathbot_3_3,
                 options: [
                     {
-                        text: "10 liter.",
+                        text: "7 liter.",
                         response:
-                            "Betul sekali! Jika kamu punya 15 liter air panas, maka kamu butuh 10 liter air dingin untuk mendapatkan rasio 3:2.",
+                            "Tidak tepat, 7 liter tidak cukup untuk mencapai rasio 3:2. Coba lagi!",
                         nextStep: 8,
                         isFinish: false
                     },
@@ -876,9 +877,9 @@ export const getSteps = (material, name) => {
                         isFinish: false
                     },
                     {
-                        text: "7 liter.",
+                        text: "10 liter.",
                         response:
-                            "Tidak tepat, 7 liter tidak cukup untuk mencapai rasio 3:2. Coba lagi!",
+                            "Betul sekali! Jika kamu punya 15 liter air panas, maka kamu butuh 10 liter air dingin untuk mendapatkan rasio 3:2.",
                         nextStep: 8,
                         isFinish: false
                     },

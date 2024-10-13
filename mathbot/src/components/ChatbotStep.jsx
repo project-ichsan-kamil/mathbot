@@ -240,7 +240,7 @@ export const getSteps = (material, name) => {
                 ],
                 options: [
                     {
-                        text: "Rasio adalah perbandingan antara dua nilai atau lebih",
+                        text: "Rasio adalah perbandingan antara dua nilai atau lebih.",
                         response:
                             "Tepat sekali! Rasio adalah cara untuk membandingkan dua nilai atau lebih.",
                         nextStep: 1,
@@ -272,7 +272,7 @@ export const getSteps = (material, name) => {
             {
                 message:[
                     "Masih ingatkah pada materi sebelumnya kita juga telah belajar tentang menyederhanakan rasio?", 
-                    "Hari ini, kita akan membahasnya lebih lanjut agar kamu bisa menyelesaikan masalah yang berkaitan dengan rasio dengan lebih baik"
+                    "Hari ini, kita akan membahasnya lebih lanjut agar kamu bisa menyelesaikan masalah yang berkaitan dengan rasio dengan lebih baik."
                 ],
                 options: [
                     {

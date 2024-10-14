@@ -289,9 +289,9 @@ export const getSteps = (material, name) => {
                 ],
                 options: [
                     {
-                        text: "Menambah angka pada keduanya.",
+                        text: "Mengurangi angka pada keduanya.",
                         response:
-                            "Bukan, menambah angka justru akan mengubah perbandingan. Coba pikirkan apakah kita bisa membagi kedua angka dengan angka yang sama.",
+                            "Bukan, Mengurangi angka justru akan mengubah perbandingan. Coba pikirkan apakah kita bisa membagi kedua angka dengan angka yang sama.",
                         nextStep: 3,
                         isFinish: false,
                     },

@@ -1158,7 +1158,7 @@ export const getSteps = (material, name) => {
             },
             {
                 message:
-                   [ "Latihan 4. Seorang petani mencampurkan 12 kg pupuk organik dengan 8 kg pupuk kimia untuk digunakan di ladangnya. Jika petani tersebut ingin membuat campuran pupuk dalam jumlah yang lebih besar tetapi dengan rasio yang sama, berapakah rasio lain yang setara dengan 12 kg pupuk organik dan 8 kg pupuk kimia?"],
+                   [ "Latihan 4. Seorang petani mencampurkan 12 kg pupuk organik dengan 8 kg pupuk kimia untuk digunakan di ladangnya. Jika petani tersebut ingin membuat campuran pupuk dalam jumlah yang lebih kecil tetapi dengan rasio yang sama, berapakah rasio lain yang setara dengan 12 kg pupuk organik dan 8 kg pupuk kimia?"],
                 options: [
                     {
                         key: "A",

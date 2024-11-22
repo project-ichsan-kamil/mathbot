@@ -1049,7 +1049,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "A",
                         text: "A. 30:20",
-                        response: "Yeay… Jawabanmu benar :)",
+                        response: "Yeay… Jawabanmu benar 😊",
                         nextStep: 1,
                         isFinish: false,
                         isCorrect: true,
@@ -1057,7 +1057,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "B",
                         text: "B. 40:25",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 1,
                         isFinish: false,
                         isCorrect: false,
@@ -1065,7 +1065,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "C",
                         text: "C. 50:30",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 1,
                         isFinish: false,
                         isCorrect: false,
@@ -1073,7 +1073,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "D",
                         text: "D. 60:40",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 1,
                         isFinish: false,
                         isCorrect: false,
@@ -1087,7 +1087,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "A",
                         text: "A. 7:2",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 2,
                         isFinish: false,
                         isCorrect: false,
@@ -1095,7 +1095,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "B",
                         text: "B. 7:3",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 2,
                         isFinish: false,
                         isCorrect: false,
@@ -1103,7 +1103,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "C",
                         text: "C. 2:1",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 2,
                         isFinish: false,
                         isCorrect: false,
@@ -1111,7 +1111,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "D",
                         text: "D. 5:2",
-                        response: "Yeay… Jawabanmu benar :)",
+                        response: "Yeay… Jawabanmu benar 😊",
                         nextStep: 2,
                         isFinish: false,
                         isCorrect: true,
@@ -1125,7 +1125,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "A",
                         text: "A. 4:3",
-                        response: "Yeay… Jawabanmu benar :)",
+                        response: "Yeay… Jawabanmu benar 😊",
                         nextStep: 3,
                         isFinish: false,
                         isCorrect: true,
@@ -1133,7 +1133,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "B",
                         text: "B. 8:6",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 3,
                         isFinish: false,
                         isCorrect: false,
@@ -1141,7 +1141,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "C",
                         text: "C. 12:10",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 3,
                         isFinish: false,
                         isCorrect: false,
@@ -1149,7 +1149,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "D",
                         text: "D. 5:4",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 3,
                         isFinish: false,
                         isCorrect: false,
@@ -1163,7 +1163,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "A",
                         text: "A. 6 kg pupuk organik dan 8 kg pupuk kimia",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 4,
                         isFinish: false,
                         isCorrect: false,
@@ -1171,7 +1171,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "B",
                         text: "B. 9 kg pupuk organik dan 6 kg pupuk kimia",
-                        response: "Yeay… Jawabanmu benar :)",
+                        response: "Yeay… Jawabanmu benar 😊",
                         nextStep: 4,
                         isFinish: false,
                         isCorrect: true,
@@ -1179,7 +1179,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "C",
                         text: "C. 10 kg pupuk organik dan 7 kg pupuk kimia",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 4,
                         isFinish: false,
                         isCorrect: false,
@@ -1187,7 +1187,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "D",
                         text: "D. 14 kg pupuk organik dan 8 kg pupuk kimia",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 4,
                         isFinish: false,
                         isCorrect: false,
@@ -1200,7 +1200,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "A",
                         text: "A. 2",
-                        response: "Yeay… Jawabanmu benar :)",
+                        response: "Yeay… Jawabanmu benar 😊",
                         nextStep: 5,
                         isFinish: false,
                         isCorrect: true,
@@ -1208,7 +1208,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "B",
                         text: "B. 4",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 5,
                         isFinish: false,
                         isCorrect: false,
@@ -1216,7 +1216,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "C",
                         text: "C. 8",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 5,
                         isFinish: false,
                         isCorrect: false,
@@ -1224,7 +1224,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "D",
                         text: "D. 16",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 5,
                         isFinish: false,
                         isCorrect: false,
@@ -1238,7 +1238,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "A",
                         text: "A. 6",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 6,
                         isFinish: false,
                         isCorrect: false,
@@ -1246,7 +1246,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "B",
                         text: "B. 2",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 6,
                         isFinish: false,
                         isCorrect: false,
@@ -1254,7 +1254,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "C",
                         text: "C. 3",
-                        response: "Yeay… Jawabanmu benar :)",
+                        response: "Yeay… Jawabanmu benar 😊",
                         nextStep: 6,
                         isFinish: false,
                         isCorrect: true,
@@ -1262,7 +1262,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "D",
                         text: "D. 4",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 6,
                         isFinish: false,
                         isCorrect: false,
@@ -1276,7 +1276,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "A",
                         text: "A. 10 liter",
-                        response: "Yeay… Jawabanmu benar :)",
+                        response: "Yeay… Jawabanmu benar 😊",
                         nextStep: 7,
                         isFinish: false,
                         isCorrect: true,
@@ -1284,7 +1284,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "B",
                         text: "B. 5 liter",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 7,
                         isFinish: false,
                         isCorrect: false,
@@ -1292,7 +1292,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "C",
                         text: "C. 15 liter",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 7,
                         isFinish: false,
                         isCorrect: false,
@@ -1300,7 +1300,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "D",
                         text: "D. 12 liter",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 7,
                         isFinish: false,
                         isCorrect: false,
@@ -1314,7 +1314,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "A",
                         text: "A. 10 liter",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 8,
                         isFinish: false,
                         isCorrect: false,
@@ -1322,7 +1322,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "B",
                         text: "B. 12 liter",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 8,
                         isFinish: false,
                         isCorrect: false,
@@ -1330,7 +1330,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "C",
                         text: "C. 15 liter",
-                        response: "Yeay… Jawabanmu benar :)",
+                        response: "Yeay… Jawabanmu benar 😊",
                         nextStep: 8,
                         isFinish: false,
                         isCorrect: true,
@@ -1338,7 +1338,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "D",
                         text: "D. 6 liter",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 8,
                         isFinish: false,
                         isCorrect: false,
@@ -1352,7 +1352,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "A",
                         text: "A. 3:2",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 9,
                         isFinish: false,
                         isCorrect: false,
@@ -1360,7 +1360,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "B",
                         text: "B. 3:5",
-                        response: "Yeay… Jawabanmu benar :)",
+                        response: "Yeay… Jawabanmu benar 😊",
                         nextStep: 9,
                         isFinish: false,
                         isCorrect: true,
@@ -1368,7 +1368,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "C",
                         text: "C. 2:3",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 9,
                         isFinish: false,
                         isCorrect: false,
@@ -1376,7 +1376,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "D",
                         text: "D. 5:3",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 9,
                         isFinish: false,
                         isCorrect: false,
@@ -1390,7 +1390,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "A",
                         text: "A. 1:4",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 10,
                         isFinish: true,
                         isCorrect: false,
@@ -1398,7 +1398,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "B",
                         text: "B. 3:7",
-                        response: "Yeay… Jawabanmu benar :)",
+                        response: "Yeay… Jawabanmu benar 😊",
                         nextStep: 10,
                         isFinish: true,
                         isCorrect: true,
@@ -1406,7 +1406,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "C",
                         text: "C. 2:3",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 10,
                         isFinish: true,
                         isCorrect: false,
@@ -1414,7 +1414,7 @@ export const getSteps = (material, name) => {
                     {
                         key: "D",
                         text: "D. 1:2",
-                        response: "Yah… Jawabanmu kurang tepat :(",
+                        response: "Yah… Jawabanmu kurang tepat 😔",
                         nextStep: 10,
                         isFinish: true,
                         isCorrect: false,
